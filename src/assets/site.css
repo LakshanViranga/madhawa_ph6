@@ -1,0 +1,210 @@
+/* Styles shared by the public pages. Wrap a page in <div class="site"> to use them. */
+.site {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    line-height: 1.65;
+    min-height: 100vh;
+}
+
+.site .wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+
+.site .narrow {
+    max-width: 760px;
+}
+
+.site .sec {
+    padding: 5rem 0;
+}
+
+.site .alt {
+    background: var(--bg-alt);
+    border-block: 1px solid var(--line);
+}
+
+.site h1, .site h2, .site h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    line-height: 1.15;
+}
+
+.site h1 {
+    font-size: clamp(1.9rem, 5vw, 3rem);
+    color: var(--gold-soft);
+    margin: 0 0 .75rem;
+}
+
+.site .sec h2 {
+    font-size: clamp(1.6rem, 4vw, 2.3rem);
+    margin: 0 0 1rem;
+    color: var(--gold-soft);
+}
+
+.site h3 {
+    font-size: 1.25rem;
+    margin: 0 0 .5rem;
+}
+
+.site p {
+    max-width: 62ch;
+}
+
+.site .muted {
+    color: var(--muted);
+}
+
+.site .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+    margin: 1.5rem 0;
+}
+
+.site .btn {
+    display: inline-block;
+    padding: .7rem 1.3rem;
+    border-radius: 6px;
+    font: 600 .95rem var(--font-body);
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid var(--gold);
+}
+
+.site .btn-gold {
+    background: var(--gold);
+    color: var(--on-gold);
+}
+
+.site .btn-gold:hover {
+    background: var(--gold-soft);
+}
+
+.site .btn-line {
+    background: transparent;
+    color: var(--gold);
+}
+
+.site .btn-line:hover {
+    background: var(--gold-glow);
+}
+
+.site .btn:disabled {
+    opacity: .5;
+    cursor: wait;
+}
+
+.site .link {
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.site .link:hover {
+    text-decoration: underline;
+}
+
+.site .tag {
+    display: inline-block;
+    padding: .05rem .65rem;
+    border: 1px solid var(--line);
+    border-radius: 99px;
+    font-size: .78rem;
+    color: var(--muted);
+}
+
+.site .tag.on {
+    border-color: var(--gold);
+    color: var(--gold);
+}
+
+.site .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+}
+
+.site .card {
+    margin: 0;
+    padding: 1.5rem;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: var(--surface);
+}
+
+.site .form {
+    display: grid;
+    gap: 1rem;
+}
+
+.site .form label {
+    display: grid;
+    gap: .35rem;
+    font-size: .9rem;
+    color: var(--muted);
+}
+
+.site .form input, .site .form select, .site .form textarea {
+    padding: .7rem .8rem;
+    background: var(--bg);
+    color: var(--text);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    font: inherit;
+}
+
+.site .form input:focus, .site .form select:focus, .site .form textarea:focus {
+    border-color: var(--gold);
+    outline: none;
+}
+
+.site .err {
+    color: var(--danger);
+    font-size: .9rem;
+    margin: 0;
+}
+
+/* A photo slot that shows a grey label until the picture loads (or if the file is missing) */
+.site .ph {
+    position: relative;
+    overflow: hidden;
+    background: var(--surface-2);
+}
+
+.site .ph::after {
+    content: attr(data-label);
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    color: var(--muted);
+    font-size: .8rem;
+}
+
+.site .ph img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.site .scroll {
+    overflow-x: auto;
+}
+
+.site a:focus-visible, .site button:focus-visible, .site input:focus-visible, .site select:focus-visible, .site textarea:focus-visible, .site summary:focus-visible {
+    outline: 2px solid var(--gold-soft);
+    outline-offset: 3px;
+}
+
+@media (max-width: 760px) {
+    .site .sec {
+        padding: 3.5rem 0;
+    }
+}

@@ -1,0 +1,177 @@
+{
+  "common": {
+    "theme": "Switch theme",
+    "language": "Language"
+  },
+  "nav": {
+    "about": "About",
+    "classes": "Classes",
+    "results": "Results",
+    "reviews": "Reviews",
+    "gallery": "Gallery",
+    "contact": "Contact",
+    "studentLogin": "Student login",
+    "resources": "Resources",
+    "faq": "FAQ",
+    "announcements": "Announcements",
+    "videos": "Videos"
+  },
+  "hero": {
+    "title": "Physics, taught so it stays with you.",
+    "lead": "Trusted A/L and O/L Physics classes with weekly quizzes and clear progress tracking. Classes in Sinhala and English.",
+    "join": "Join a class",
+    "portal": "Open student portal"
+  },
+  "login": {
+    "title": "Student login",
+    "hint": "Use the student ID and password given by your teacher.",
+    "id": "Student ID",
+    "password": "Password",
+    "show": "Show",
+    "hide": "Hide",
+    "submit": "Log in",
+    "forgot": "Forgot your password? Message your teacher on WhatsApp",
+    "back": "Back to website"
+  },
+  "quiz": {
+    "weekly": "Weekly quizzes",
+    "start": "Start quiz",
+    "progress": "My progress",
+    "overallRank": "Overall rank",
+    "thisWeek": "This week's place"
+  },
+  "videos": {
+    "title": "See how I teach",
+    "lead": "Watch short lessons and see my teaching style before you join.",
+    "play": "Play video",
+    "prev": "Previous",
+    "next": "Next"
+  },
+  "gallery": {
+    "title": "Photo gallery",
+    "lead": "A look inside our classes, results days and events.",
+    "viewAll": "View all photos",
+    "back": "Back to home",
+    "all": "All",
+    "classes": "Classes",
+    "results": "Results day",
+    "events": "Events",
+    "close": "Close",
+    "prev": "Previous photo",
+    "next": "Next photo"
+  },
+  "site": {
+    "whatsapp": "Chat on WhatsApp",
+    "whatsappText": "Hello, I would like to know about your Physics classes.",
+    "privacy": "Privacy",
+    "announcements": "Announcements",
+    "follow": "Follow us",
+    "studentLogin": "Student login",
+    "rights": "All rights reserved.",
+    "developedBy": "Developed by"
+  },
+  "classes": {
+    "title": "Classes",
+    "fee": "Fee",
+    "perMonth": "per month",
+    "ask": "Ask about this class",
+    "online": "Online",
+    "physical": "In person",
+    "more": "More info",
+    "feeNote": "Fee details are shared when you enquire.",
+    "learn": "What you will learn",
+    "includes": "What's included",
+    "audience": "Who it's for",
+    "schedule": "Schedule",
+    "join": "Join this class",
+    "askWhatsapp": "Ask on WhatsApp",
+    "close": "Close",
+    "waText": "Hello, I would like to know about the {name} class."
+  },
+  "timetable": {
+    "title": "Weekly timetable",
+    "lead": "Find your class and plan your week.",
+    "day": "Day",
+    "time": "Time",
+    "class": "Class",
+    "where": "Where"
+  },
+  "resources": {
+    "title": "Free resources",
+    "lead": "Notes and past papers you can download for free.",
+    "download": "Download",
+    "all": "All",
+    "notes": "Notes",
+    "paper": "Past papers",
+    "viewAll": "View all resources",
+    "none": "No files here yet."
+  },
+  "announcements": {
+    "title": "Announcements",
+    "lead": "News about batches, class changes and holidays.",
+    "viewAll": "All announcements",
+    "none": "No announcements right now.",
+    "dismiss": "Dismiss",
+    "batch": "New batch",
+    "notice": "Notice",
+    "holiday": "Holiday",
+    "read": "Read more"
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "lead": "Quick answers for students and parents.",
+    "more": "Still have a question? Message us on WhatsApp."
+  },
+  "contact": {
+    "title": "Join a class",
+    "lead": "Send your details and we will tell you about the next batch, fees and how to register.",
+    "name": "Student name",
+    "phone": "Phone number",
+    "class": "Class",
+    "notSure": "Not sure yet",
+    "message": "Message (optional)",
+    "submit": "Send request",
+    "sending": "Sending...",
+    "sentTitle": "Thank you!",
+    "sentText": "We have your request and will contact you soon.",
+    "whatsappAlso": "Want a faster reply? Message us on WhatsApp.",
+    "error": "We could not send your request. Please try again or use WhatsApp.",
+    "address": "Address",
+    "hours": "Class hours",
+    "openMap": "Open in Google Maps",
+    "call": "Call",
+    "whatsapp": "Message on WhatsApp"
+  },
+  "privacy": {
+    "title": "Privacy"
+  },
+  "notfound": {
+    "title": "Page not found",
+    "text": "The page you are looking for does not exist or has moved.",
+    "home": "Back to home"
+  },
+  "comingsoon": {
+    "badge": "Soon",
+    "tag": "Student portal",
+    "title": "Coming soon",
+    "lead": "Weekly quizzes, marks and progress charts for every student, all in one place. We are putting the finishing touches on it.",
+    "opening": "Opening",
+    "openingDefault": "We will announce the opening date here and on WhatsApp.",
+    "f1Title": "Weekly quiz",
+    "f1Text": "Take your quiz on any phone, with a timer and instant marks.",
+    "f2Title": "Marks and rank",
+    "f2Text": "See your marks, your place in the batch and the weekly leaderboard.",
+    "f3Title": "Progress by topic",
+    "f3Text": "Find your strong and weak topics and watch them grow week by week.",
+    "f4Title": "Discussion videos",
+    "f4Text": "Watch the discussion lesson for every quiz on YouTube.",
+    "notify": "Tell me when it opens",
+    "notifyText": "Message us on WhatsApp and we will let you know the day it opens.",
+    "waText": "Hello, please tell me when the student portal opens.",
+    "meanwhile": "In the meantime",
+    "resources": "Download free notes and past papers",
+    "videos": "Watch short lessons",
+    "join": "Join a class",
+    "home": "Back to home"
+  }
+}

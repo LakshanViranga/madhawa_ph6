@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Replace YOUR-DOMAIN with your real address before publishing. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://tharka.lk/</loc></url>
+  <url><loc>https://tharka.lk/resources</loc></url>
+  <url><loc>https://tharka.lk/gallery</loc></url>
+  <url><loc>https://tharka.lk/lms/login</loc></url>
+  <url><loc>https://tharka.lk/lms/register</loc></url>
+  <url><loc>https://tharka.lk/privacy</loc></url>
+</urlset>

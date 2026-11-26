@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!-- Applies the saved theme before the page draws, so it does not flash dark -->
+    <script>
+        try {
+            document.documentElement.dataset.theme = localStorage.getItem('theme') || 'light'
+        } catch (e) {
+            document.documentElement.dataset.theme = 'light'
+        }
+    </script>
+
+    <title>Raviska D. Amarasekare | A/L Physics classes | Online & Physical</title>
+    <meta name="theme-color" content="#000000"/>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+
+<!--    <meta property="og:image" content="%VITE_SITE_URL%/og-image.jpg"/>-->
+<!--    <meta property="og:image:width" content="1200"/>-->
+<!--    <meta property="og:image:height" content="630"/>-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=Manrope:wght@400;600&family=Noto+Sans+Sinhala:wght@400;600&family=Noto+Sans+Tamil:wght@400;600&family=Noto+Serif+Sinhala:wght@600&family=Noto+Serif+Tamil:wght@600&display=swap"
+          rel="stylesheet"/>
+    <script async src="https://www.googletagmanager.com/gtm.js?id=G-VZ03137DWT"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+    </script>
+</head>
+<body>
+<div id="app"></div>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

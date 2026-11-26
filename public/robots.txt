@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /lms
+Disallow: /api
+
+# Replace YOUR-DOMAIN with your real address, for example https://www.example.lk
+Sitemap: https://www.tharka.lk/sitemap.xml

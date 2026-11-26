@@ -1,0 +1,97 @@
+/* src/assets/theme.css
+   Colors live in the two theme blocks below. Everything else uses var(--name).
+   To add a theme, copy a block, rename data-theme, and add it to THEMES in useTheme.js */
+
+/* Night theme (default): deep navy and cyan */
+:root,
+[data-theme='night'] {
+    color-scheme: dark;
+
+    /* Brand */
+    --primary: #20d5e8;
+    --secondary: #288bcf;
+    --accent: #20d5e8;
+    --accent-soft: #c9ddf7;
+    --accent-glow: rgba(32, 213, 232, 0.12);
+    --on-accent: #132b4f;       /* text on accent buttons */
+
+    /* Backgrounds */
+    --bg: #0a1628;
+    --bg-alt: #0e1f3a;
+    --surface: #0f2240;
+    --surface-2: #132b4f;
+    --bg-glass: rgba(10, 22, 40, 0.92);
+
+    /* Typography */
+    --heading: #c9ddf7;
+    --text: #e6eef9;
+    --muted: #94a3b8;
+
+    /* Borders */
+    --line: #1f3a63;
+
+    /* Status */
+    --success: #4ade80;
+    --warning: #fbbf24;
+    --danger: #f87171;
+    --info: #5ab0e8;
+
+    /* Buttons */
+    --button-primary-bg: var(--accent);
+    --button-primary-text: var(--on-accent);
+}
+
+/* Light theme: soft blue-white and navy */
+[data-theme='light'] {
+    color-scheme: light;
+
+    /* Brand */
+    --primary: #132b4f;
+    --secondary: #288bcf;
+    --accent: #20d5e8;
+    --accent-soft: #c9ddf7;
+    --accent-glow: rgba(32, 213, 232, 0.12);
+    --on-accent: #132b4f;
+
+    /* Backgrounds */
+    --bg: #f4f9ff;
+    --bg-alt: #eaf2fd;
+    --surface: #fcfcfc;
+    --surface-2: #c9ddf7;
+    --bg-glass: rgba(244, 249, 255, 0.92);
+
+    /* Typography */
+    --heading: #132b4f;
+    --text: #334155;
+    --muted: #64748b;
+
+    /* Borders */
+    --line: #e2e8f0;
+
+    /* Status */
+    --success: #16a34a;
+    --warning: #d97706;
+    --danger: #dc2626;
+    --info: #288bcf;
+
+    /* Buttons */
+    --button-primary-bg: var(--accent);
+    --button-primary-text: var(--on-accent);
+}
+
+/* Fonts (not theme dependent). Sinhala and Tamil fall back to Noto fonts. */
+:root {
+    --font-display: 'Fraunces', 'Noto Serif Sinhala', 'Noto Serif Tamil', Georgia, serif;
+    --font-body: 'Manrope', 'Noto Sans Sinhala', 'Noto Sans Tamil', system-ui, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    transition: background 0.25s, color 0.25s;
+}
+
+/* Sinhala and Tamil letters need more line height */
+:lang(si), :lang(ta) { line-height: 1.85; }

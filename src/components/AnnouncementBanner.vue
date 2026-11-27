@@ -47,18 +47,18 @@ function dismiss() {
   gap: .5rem 1rem;
   padding: .6rem 3rem .6rem 1.25rem;
   position: relative;
-  background: var(--gold-glow);
-  border-bottom: 1px solid var(--gold);
+  background: var(--accent-glow);
+  border-bottom: 1px solid var(--accent);
   color: var(--text);
   font: .92rem var(--font-body);
 }
 
 .tag {
   padding: .05rem .65rem;
-  border: 1px solid var(--gold);
+  border: 1px solid var(--accent);
   border-radius: 99px;
   font-size: .75rem;
-  color: var(--gold);
+  color: var(--secondary);
 }
 
 .text {
@@ -66,7 +66,7 @@ function dismiss() {
 }
 
 a {
-  color: var(--gold);
+  color: var(--secondary);
 }
 
 button {
@@ -85,11 +85,11 @@ button {
 }
 
 button:hover {
-  background: var(--gold-glow);
+  background: var(--accent-glow);
 }
 
 a:focus-visible, button:focus-visible {
-  outline: 2px solid var(--gold-soft);
+  outline: 2px solid var(--heading);
   outline-offset: 2px;
 }
 </style>

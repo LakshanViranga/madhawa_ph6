@@ -257,7 +257,7 @@ async function resetCode(c) {
 .code {
   font: 600 1rem monospace;
   letter-spacing: .08em;
-  color: var(--gold);
+  color: var(--secondary);
   user-select: all;
 }
 
@@ -282,7 +282,7 @@ textarea {
   background: none;
   border: 0;
   padding: 0;
-  color: var(--gold);
+  color: var(--secondary);
   font: inherit;
   text-decoration: underline;
   cursor: pointer;

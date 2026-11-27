@@ -325,7 +325,7 @@ const pct = (v) => (v == null ? 'No result yet' : `${v}%`)
 
 h1 {
   font: 600 clamp(1.6rem, 4vw, 2.2rem) var(--font-display);
-  color: var(--gold-soft);
+  color: var(--heading);
   margin: 0;
 }
 
@@ -341,7 +341,7 @@ h2 {
 }
 
 .gold {
-  color: var(--gold);
+  color: var(--secondary);
 }
 
 .empty {
@@ -401,12 +401,12 @@ select option {
 }
 
 .seg button:not(.on):hover {
-  background: var(--gold-glow);
+  background: var(--accent-glow);
 }
 
 .seg button.on {
-  background: var(--gold);
-  color: var(--on-gold);
+  background: var(--accent);
+  color: var(--on-accent);
   font-weight: 600;
 }
 
@@ -437,12 +437,12 @@ select option {
 }
 
 .card.hero {
-  border-color: var(--gold);
+  border-color: var(--accent);
 }
 
 .card b {
   font: 600 2.6rem var(--font-display);
-  color: var(--gold);
+  color: var(--secondary);
   line-height: 1.1;
 }
 
@@ -482,7 +482,7 @@ select option {
 }
 
 .dot.you {
-  background: var(--gold);
+  background: var(--accent);
 }
 
 .dot.avg {
@@ -507,7 +507,7 @@ svg {
 
 .you-line {
   fill: none;
-  stroke: var(--gold);
+  stroke: var(--accent);
   stroke-width: 3;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -522,7 +522,7 @@ svg {
 
 .pt {
   fill: var(--bg);
-  stroke: var(--gold);
+  stroke: var(--accent);
   stroke-width: 2.5;
 }
 
@@ -544,8 +544,8 @@ svg {
 }
 
 .board li.me {
-  border-color: var(--gold);
-  background: var(--gold-glow);
+  border-color: var(--accent);
+  background: var(--accent-glow);
 }
 
 .pos {
@@ -554,15 +554,15 @@ svg {
   display: grid;
   place-items: center;
   border-radius: 50%;
-  border: 1px solid var(--gold);
-  color: var(--gold);
+  border: 1px solid var(--accent);
+  color: var(--secondary);
   font-size: .85rem;
   flex: none;
 }
 
 .board li:first-child .pos {
-  background: var(--gold);
-  color: var(--on-gold);
+  background: var(--accent);
+  color: var(--on-accent);
 }
 
 .nm {
@@ -572,7 +572,7 @@ svg {
 }
 
 .nm em {
-  color: var(--gold);
+  color: var(--secondary);
   font-style: normal;
   font-size: .85rem;
 }
@@ -611,12 +611,12 @@ svg {
 
 .fill {
   height: 100%;
-  background: var(--gold);
+  background: var(--accent);
   border-radius: 4px;
 }
 
 a:focus-visible, button:focus-visible, select:focus-visible {
-  outline: 2px solid var(--gold-soft);
+  outline: 2px solid var(--heading);
   outline-offset: 3px;
 }
 
@@ -659,9 +659,9 @@ a:focus-visible, button:focus-visible, select:focus-visible {
   flex: none;
   display: grid;
   place-items: center;
-  border: 1px solid var(--gold);
+  border: 1px solid var(--accent);
   border-radius: 50%;
-  color: var(--gold);
+  color: var(--secondary);
   font-size: 1.25rem;
 }
 
@@ -738,7 +738,7 @@ a:focus-visible, button:focus-visible, select:focus-visible {
 
 .preview-line {
   fill: none;
-  stroke: var(--gold);
+  stroke: var(--accent);
   stroke-width: 3;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -791,7 +791,7 @@ a:focus-visible, button:focus-visible, select:focus-visible {
 .gate-picker select {
   min-width: 220px;
   padding: .6rem .75rem;
-  border: 1px solid var(--gold);
+  border: 1px solid var(--accent);
   border-radius: 6px;
   background: var(--surface);
   color: var(--text);

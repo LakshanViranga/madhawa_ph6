@@ -46,7 +46,7 @@ defineProps({
 
 .brand {
   font: 600 1.4rem var(--font-display);
-  color: var(--gold);
+  color: var(--secondary);
   text-decoration: none;
   position: relative;
   z-index: 1;
@@ -64,7 +64,7 @@ defineProps({
 
 .wave path {
   fill: none;
-  stroke: var(--gold);
+  stroke: var(--accent);
   stroke-width: 2;
   stroke-dasharray: 1400;
   stroke-dashoffset: 1400;
@@ -80,7 +80,7 @@ defineProps({
 .quote {
   position: relative;
   font: 600 clamp(1.5rem, 3vw, 2.2rem) var(--font-display);
-  color: var(--gold-soft);
+  color: var(--heading);
   max-width: 16ch;
   line-height: 1.2;
   margin: 0;
@@ -93,7 +93,7 @@ defineProps({
 }
 
 a:focus-visible {
-  outline: 2px solid var(--gold-soft);
+  outline: 2px solid var(--heading);
   outline-offset: 3px;
 }
 

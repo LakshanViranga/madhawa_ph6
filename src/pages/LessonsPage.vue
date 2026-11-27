@@ -209,13 +209,13 @@ function fileSize(bytes) {
 .back {
   display: inline-block;
   margin-bottom: 1rem;
-  color: var(--gold);
+  color: var(--secondary);
   font-size: .9rem;
 }
 
 h1 {
   font: 600 clamp(1.6rem, 4vw, 2.2rem) var(--font-display);
-  color: var(--gold-soft);
+  color: var(--heading);
   margin: 0 0 .6rem;
 }
 
@@ -241,7 +241,7 @@ h3 {
 
 .tag {
   font-size: .8rem;
-  color: var(--gold);
+  color: var(--secondary);
 }
 
 .tag.kind {
@@ -260,7 +260,7 @@ h3 {
 }
 
 .crumbs a {
-  color: var(--gold);
+  color: var(--secondary);
 }
 
 .panel {
@@ -288,8 +288,8 @@ h3 {
 }
 
 .state.live, .state.soon {
-  border-color: var(--gold);
-  color: var(--gold);
+  border-color: var(--accent);
+  color: var(--secondary);
 }
 
 .notes {
@@ -325,30 +325,30 @@ h3 {
   margin-top: .6rem;
   padding: .55rem 1.1rem;
   border-radius: 6px;
-  border: 1px solid var(--gold);
-  background: var(--gold);
-  color: var(--on-gold);
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: var(--on-accent);
   font: 600 .9rem var(--font-body);
   text-decoration: none;
   cursor: pointer;
 }
 
 .btn:hover {
-  background: var(--gold-soft);
+  background: var(--heading);
 }
 
 .btn.ghost {
   margin: 0;
   background: transparent;
-  color: var(--gold);
+  color: var(--secondary);
 }
 
 .btn.ghost:hover {
-  background: var(--gold-glow);
+  background: var(--accent-glow);
 }
 
 button:focus-visible, a:focus-visible {
-  outline: 2px solid var(--gold-soft);
+  outline: 2px solid var(--heading);
   outline-offset: 3px;
 }
 </style>

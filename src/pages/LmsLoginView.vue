@@ -81,239 +81,399 @@ onMounted(() => {
 
 <template>
   <main class="login">
-    <section class="side" aria-hidden="true">
-      <router-link to="/" class="brand">Tharka</router-link>
-      <svg class="wave" viewBox="0 0 600 120" preserveAspectRatio="none">
-        <path d="M0 60 C 50 0, 100 0, 150 60 S 250 120, 300 60 S 400 0, 450 60 S 550 120, 600 60"/>
+    <!-- Atmosphere: soft glow plus slowly turning orbits behind the card -->
+    <div class="bg" aria-hidden="true">
+      <span class="glow"></span>
+      <svg class="orbits" viewBox="0 0 400 400">
+        <g transform="translate(200 200)">
+          <ellipse rx="190" ry="68"/>
+          <ellipse rx="190" ry="68" transform="rotate(60)"/>
+          <ellipse rx="190" ry="68" transform="rotate(120)"/>
+          <circle r="7"/>
+        </g>
       </svg>
-      <p class="quote">One quiz a week. Every mark counts toward your A.</p>
-    </section>
+    </div>
 
-    <section class="panel">
-      <form class="box" @submit.prevent="submit">
-        <h1>Student login</h1>
-        <p class="muted">Log in with the mobile number you registered with and your password.</p>
+    <header class="top">
+      <router-link to="/" class="brand">Tharka</router-link>
+      <router-link to="/" class="back">Back to website</router-link>
+    </header>
 
-        <label>Mobile number
-          <input v-model="id" type="tel" inputmode="tel" placeholder="e.g. 077 123 4567" autocomplete="username"
-                 required/>
-        </label>
+    <section class="stage">
+      <form class="card" @submit.prevent="submit">
+        <span class="mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+            <path d="M2 12c2.5-8 5.5-8 8 0s5.5 8 8 0 2.5-4 4-4"/>
+          </svg>
+        </span>
+        <h1>Welcome back</h1>
+        <p class="sub">Log in with the mobile number you registered with and your password.</p>
 
-        <label>Password
-          <span class="pw">
-            <input v-model="password" :type="show ? 'text' : 'password'" autocomplete="current-password" required/>
-            <button type="button" class="toggle" @click="show = !show">{{ show ? 'Hide' : 'Show' }}</button>
+        <label>
+          <span class="lbl">Mobile number</span>
+          <span class="field">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
+            <input v-model="id" type="tel" inputmode="tel" placeholder="e.g. 077 123 4567" autocomplete="username" required/>
           </span>
         </label>
 
-        <button class="btn" type="submit" :disabled="busy">{{ busy ? 'Checking...' : 'Log in' }}</button>
+        <label>
+          <span class="lbl">Password</span>
+          <span class="field">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+            <input v-model="password" :type="show ? 'text' : 'password'" autocomplete="current-password" required/>
+            <button type="button" class="toggle" :aria-pressed="show" @click="show = !show">{{ show ? 'Hide' : 'Show' }}</button>
+          </span>
+        </label>
+
         <p v-if="error" class="err" role="alert">{{ error }}</p>
-        <p class="help">Forgot your password? <a href="https://wa.me/94771234567" target="_blank" rel="noopener">Message
-          your teacher on WhatsApp</a></p>
-        <p class="help">New student?
-          <router-link to="/lms/register">Create an account</router-link>
-        </p>
-        <router-link to="/" class="back">Back to website</router-link>
+
+        <button class="btn" type="submit" :disabled="busy">
+          <span v-if="busy" class="spinner" aria-hidden="true"></span>
+          {{ busy ? 'Checking...' : 'Log in' }}
+        </button>
+
+        <p class="or"><span>New here?</span></p>
+
+        <div class="alt">
+          <router-link to="/lms/register" class="ghost">Create an account</router-link>
+          <a class="ghost" href="https://wa.me/94771234567" target="_blank" rel="noopener">Forgot password? WhatsApp</a>
+        </div>
       </form>
+
+      <ul class="perks" aria-label="What you get">
+        <li>Weekly quiz</li>
+        <li>Marks and progress</li>
+        <li>Discussion videos</li>
+      </ul>
     </section>
   </main>
 </template>
 
 <style scoped>
 .login {
+  position: relative;
   min-height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-body);
 }
 
-.side {
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 2.5rem;
-  background: var(--bg-alt);
-  border-right: 1px solid var(--line);
-}
-
-.brand {
-  font: 600 1.4rem var(--font-display);
-  color: var(--gold);
-  text-decoration: none;
-  position: relative;
-  z-index: 1;
-}
-
-.wave {
+/* Background */
+.bg {
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 40%;
-  width: 100%;
-  height: 160px;
-  opacity: .6;
+  inset: 0;
+  pointer-events: none;
 }
 
-.wave path {
+.glow {
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  width: min(900px, 140vw);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(closest-side, var(--accent-glow), transparent);
+}
+
+.orbits {
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  width: min(820px, 150vw);
+  transform: translate(-50%, -50%);
   fill: none;
-  stroke: var(--gold);
-  stroke-width: 2;
-  stroke-dasharray: 1400;
-  stroke-dashoffset: 1400;
-  animation: draw 3s ease-out forwards;
+  stroke: var(--secondary);
+  stroke-width: 1;
+  opacity: .28;
+  animation: turn 60s linear infinite;
 }
 
-.err {
-  margin: 0;
-  color: var(--danger);
-  font-size: .9rem;
+.orbits circle {
+  fill: var(--accent);
+  stroke: none;
 }
 
-@keyframes draw {
+@keyframes turn {
   to {
-    stroke-dashoffset: 0;
+    transform: translate(-50%, -50%) rotate(360deg);
   }
 }
 
-.quote {
+/* Top bar */
+.top {
   position: relative;
-  font: 600 clamp(1.5rem, 3vw, 2.2rem) var(--font-display);
-  color: var(--gold-soft);
-  max-width: 16ch;
-  line-height: 1.2;
-  margin: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem clamp(1.25rem, 4vw, 2.5rem);
 }
 
-.panel {
+.brand {
+  font: 700 1.3rem var(--font-display);
+  color: var(--heading);
+  text-decoration: none;
+}
+
+.back {
+  padding: .45rem .95rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--bg-glass);
+  color: var(--text);
+  font-size: .88rem;
+  text-decoration: none;
+  transition: border-color .2s;
+}
+
+.back:hover {
+  border-color: var(--secondary);
+}
+
+/* Card */
+.stage {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 1.25rem;
+  padding: 1rem 1.25rem 3rem;
+}
+
+.card {
+  width: min(420px, 100%);
+  display: grid;
+  gap: 1rem;
+  padding: 2.25rem 2rem;
+  background: var(--bg-glass);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  box-shadow: 0 24px 70px var(--accent-glow);
+  animation: lift .8s cubic-bezier(.2, .7, .2, 1) both;
+}
+
+@keyframes lift {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(.97);
+  }
+}
+
+.mark {
   display: grid;
   place-items: center;
-  padding: 2rem 1.25rem;
-}
-
-.box {
-  width: 100%;
-  max-width: 380px;
-  display: grid;
-  gap: 1.1rem;
+  width: 54px;
+  height: 54px;
+  border-radius: 18px;
+  background: var(--accent);
+  color: var(--on-accent);
 }
 
 h1 {
-  font: 600 2rem var(--font-display);
-  margin: 0;
-  color: var(--gold-soft);
+  margin: .25rem 0 0;
+  font: 700 2rem/1.15 var(--font-display);
+  color: var(--heading);
 }
 
-.muted {
-  color: var(--muted);
+.sub {
   margin: 0 0 .5rem;
+  color: var(--muted);
+  font-size: .95rem;
+  line-height: 1.6;
 }
 
 label {
   display: grid;
   gap: .4rem;
-  font-size: .9rem;
+}
+
+.lbl {
+  font-size: .85rem;
+  font-weight: 600;
   color: var(--muted);
 }
 
-input {
-  width: 100%;
-  box-sizing: border-box;
-  padding: .8rem;
-  background: var(--bg);
-  color: var(--text);
+.field {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  padding: 0 .9rem;
+  background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 6px;
+  border-radius: 14px;
+  color: var(--muted);
+  transition: border-color .2s, box-shadow .2s;
+}
+
+.field:focus-within {
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 4px var(--accent-glow);
+  color: var(--secondary);
+}
+
+.field input {
+  flex: 1;
+  min-width: 0;
+  padding: .9rem 0;
+  background: none;
+  border: 0;
+  outline: none;
+  color: var(--text);
   font: inherit;
 }
 
-input:focus {
-  border-color: var(--gold);
-  outline: none;
-}
-
-.pw {
-  position: relative;
-  display: block;
-}
-
-.pw input {
-  padding-right: 4.5rem;
-}
-
 .toggle {
-  position: absolute;
-  right: .5rem;
-  top: 50%;
-  transform: translateY(-50%);
+  padding: .3rem .5rem;
   background: none;
   border: 0;
-  color: var(--gold);
-  font: 600 .85rem var(--font-body);
+  color: var(--secondary);
+  font: 700 .82rem var(--font-body);
   cursor: pointer;
+}
+
+.err {
+  margin: 0;
+  padding: .7rem .9rem;
+  background: var(--accent-glow);
+  border: 1px solid var(--danger);
+  border-radius: 12px;
+  color: var(--danger);
+  font-size: .9rem;
 }
 
 .btn {
-  padding: .85rem;
-  border-radius: 6px;
-  border: 1px solid var(--gold);
-  background: var(--gold);
-  color: var(--on-gold);
-  font: 600 1rem var(--font-body);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .6rem;
+  margin-top: .25rem;
+  padding: .95rem;
+  border: 0;
+  border-radius: 14px;
+  background: var(--button-primary-bg);
+  color: var(--button-primary-text);
+  font: 700 1rem var(--font-body);
   cursor: pointer;
+  transition: transform .15s, box-shadow .2s;
 }
 
-.btn:hover {
-  background: var(--gold-soft);
+.btn:hover:not(:disabled) {
+  box-shadow: 0 0 0 5px var(--accent-glow);
+  transform: translateY(-1px);
+}
+
+.btn:active:not(:disabled) {
+  transform: scale(.98);
 }
 
 .btn:disabled {
-  opacity: .5;
+  opacity: .6;
   cursor: not-allowed;
 }
 
-.help {
-  font-size: .85rem;
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spin .7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.or {
+  position: relative;
+  margin: .5rem 0 0;
+  text-align: center;
   color: var(--muted);
-  margin: 0;
+  font-size: .82rem;
 }
 
-.help a, .back {
-  color: var(--gold);
+.or::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  border-top: 1px solid var(--line);
 }
 
-.back {
-  font-size: .9rem;
+.or span {
+  position: relative;
+  padding: 0 .75rem;
+  background: var(--bg);
+  border-radius: 99px;
+}
+
+.alt {
+  display: grid;
+  gap: .6rem;
+}
+
+.ghost {
+  padding: .75rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  color: var(--text);
+  font-size: .92rem;
+  font-weight: 600;
+  text-align: center;
   text-decoration: none;
+  transition: border-color .2s, color .2s;
 }
 
-a:focus-visible, button:focus-visible, input:focus-visible {
-  outline: 2px solid var(--gold-soft);
+.ghost:hover {
+  border-color: var(--secondary);
+  color: var(--secondary);
+}
+
+/* Perks under the card */
+.perks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.perks li {
+  padding: .4rem .9rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--bg-glass);
+  color: var(--muted);
+  font-size: .82rem;
+}
+
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--secondary);
   outline-offset: 3px;
 }
 
-@media (max-width: 760px) {
-  .login {
-    grid-template-columns: 1fr;
-  }
-
-  .side {
-    min-height: 150px;
-    padding: 1.5rem;
-  }
-
-  .quote, .wave {
-    display: none;
+@media (max-width: 480px) {
+  .card {
+    padding: 1.75rem 1.25rem;
+    border-radius: 22px;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .wave path {
+  .orbits, .card, .spinner {
     animation: none;
-    stroke-dashoffset: 0;
   }
 }
 </style>

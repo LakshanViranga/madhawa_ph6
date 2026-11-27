@@ -6,11 +6,11 @@ const { t } = useI18n()
 
 // Paste any YouTube link (watch, youtu.be, shorts or embed). Edit titles and topics.
 const videos = [
-  { url: 'https://www.youtube.com/watch?v=EzYkTxFgoRk&pp=0gcJCTsMAYcqIYzv', title: "Easy Physics, Full Paper Discussion", topic: 'All Syllabus' },
-  { url: 'https://www.youtube.com/watch?v=smqxd0Nhefs', title: 'Solving a past paper question step by step', topic: 'Paper class' },
-  { url: 'https://www.youtube.com/watch?v=06-y43_VjWo', title: 'Paper Marking Scheme Discussion', topic: 'Exam Tricks' },
-  { url: 'https://www.youtube.com/watch?v=WbQZxhUlvY8', title: 'Paper Discussion', topic: 'Paper Discussion' },
-  { url: 'https://www.youtube.com/watch?v=ThoCv_A9ZAU', title: 'MCQ Hacks in 5 minutes', topic: 'Exam Tricks' },
+  { url: 'https://www.youtube.com/watch?v=WR-8xRfbkH0', title: "Easy Physics, Full Paper Discussion", topic: 'All Syllabus' },
+  { url: 'https://www.youtube.com/watch?v=L7868T1glzw', title: 'Solving a past paper question step by step', topic: 'Paper class' },
+  { url: 'https://www.youtube.com/watch?v=QCqWPwAxRr8', title: 'Paper Marking Scheme Discussion', topic: 'Exam Tricks' },
+  { url: 'https://www.youtube.com/watch?v=X6noeGva9qU', title: 'Paper Discussion', topic: 'Paper Discussion' },
+  { url: 'https://www.youtube.com/watch?v=FGpLDPAf76w', title: 'MCQ Hacks in 5 minutes', topic: 'Exam Tricks' },
 ]
 
 const idOf = (url) => (url.match(/(?:youtu\.be\/|v=|embed\/|shorts\/)([\w-]{11})/) || [])[1] || url
@@ -78,13 +78,13 @@ onMounted(update)
 <style scoped>
 .sec { padding: 5rem 0 0; background: var(--bg); color: var(--text); font-family: var(--font-body); }
 .wrap { max-width: 1080px; margin: 0 auto; padding: 0 1.25rem; }
-h2 { font: 600 clamp(1.6rem, 4vw, 2.3rem) var(--font-display); color: var(--gold-soft); margin: 0 0 .5rem; line-height: 1.15; }
+h2 { font: 600 clamp(1.6rem, 4vw, 2.3rem) var(--font-display); color: var(--heading); margin: 0 0 .5rem; line-height: 1.15; }
 h3 { font: 600 1.05rem var(--font-display); margin: .4rem 0 0; line-height: 1.3; }
 .muted { color: var(--muted); margin: 0; max-width: 56ch; }
 .head { display: flex; align-items: end; justify-content: space-between; gap: 1rem; margin-bottom: 1.5rem; }
 .ctrl { display: flex; gap: .5rem; flex: none; }
-.ctrl button { width: 40px; height: 40px; display: grid; place-items: center; border: 1px solid var(--gold); border-radius: 50%; background: transparent; color: var(--gold); cursor: pointer; }
-.ctrl button:hover:not(:disabled) { background: var(--gold-glow); }
+.ctrl button { width: 40px; height: 40px; display: grid; place-items: center; border: 1px solid var(--accent); border-radius: 50%; background: transparent; color: var(--secondary); cursor: pointer; }
+.ctrl button:hover:not(:disabled) { background: var(--accent-glow); }
 .ctrl button:disabled { opacity: .3; cursor: default; border-color: var(--line); }
 
 .track { display: flex; gap: 1.25rem; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding-bottom: .5rem; }
@@ -96,10 +96,10 @@ h3 { font: 600 1.05rem var(--font-display); margin: .4rem 0 0; line-height: 1.3;
 .poster::after { content: attr(data-label); position: absolute; inset: 0; display: grid; place-items: center; color: var(--muted); font-size: .8rem; }
 .poster img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
 .play { position: absolute; z-index: 2; left: 50%; top: 50%; width: 56px; height: 56px; transform: translate(-50%, -50%); display: grid; place-items: center;
-  border-radius: 50%; background: var(--gold); color: var(--on-gold); transition: transform .15s; }
+  border-radius: 50%; background: var(--accent); color: var(--on-accent); transition: transform .15s; }
 .poster:hover .play { transform: translate(-50%, -50%) scale(1.1); }
-.tag { display: inline-block; margin-top: .75rem; font-size: .78rem; color: var(--gold); }
-button:focus-visible, .track:focus-visible { outline: 2px solid var(--gold-soft); outline-offset: 3px; }
+.tag { display: inline-block; margin-top: .75rem; font-size: .78rem; color: var(--secondary); }
+button:focus-visible, .track:focus-visible { outline: 2px solid var(--heading); outline-offset: 3px; }
 
 @media (max-width: 760px) { .sec { padding-top: 3.5rem; } }
 </style>

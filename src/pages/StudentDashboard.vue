@@ -320,7 +320,7 @@ const targetMet = computed(() => weeklyDone.value >= target.value)
 
 h1 {
   font: 600 clamp(1.6rem, 4vw, 2.2rem) var(--font-display);
-  color: var(--gold-soft);
+  color: var(--heading);
   margin: 0 0 .5rem;
 }
 
@@ -405,12 +405,12 @@ h2 {
 }
 
 .when b {
-  color: var(--gold-soft);
+  color: var(--heading);
   font-weight: 600;
 }
 
 .when b.now {
-  color: var(--gold);
+  color: var(--secondary);
 }
 
 .live.first .title {
@@ -451,13 +451,13 @@ h2 {
 }
 
 .bar {
-  stroke: var(--gold);
+  stroke: var(--accent);
   stroke-linecap: round;
   transition: stroke-dasharray .6s ease;
 }
 
 .bar.met {
-  stroke: var(--gold-soft);
+  stroke: var(--heading);
 }
 
 .ring-text {
@@ -471,7 +471,7 @@ h2 {
 
 .ring-text b {
   font: 600 2.1rem/1 var(--font-display);
-  color: var(--gold-soft);
+  color: var(--heading);
 }
 
 .ring-text span {
@@ -490,15 +490,15 @@ h2 {
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
-  border: 1px solid var(--gold);
+  border: 1px solid var(--accent);
   background: transparent;
-  color: var(--gold);
+  color: var(--secondary);
   font: 600 1.1rem var(--font-body);
   cursor: pointer;
 }
 
 .step:hover {
-  background: var(--gold-glow);
+  background: var(--accent-glow);
 }
 
 /* pending */
@@ -509,7 +509,7 @@ h2 {
   border-radius: 99px;
   font-size: .78rem;
   text-align: center;
-  color: var(--gold);
+  color: var(--secondary);
 }
 
 .due {
@@ -535,7 +535,7 @@ h2 {
 }
 
 .links a {
-  color: var(--gold);
+  color: var(--secondary);
   font-size: .9rem;
   text-decoration: none;
 }
@@ -549,9 +549,9 @@ h2 {
   display: inline-block;
   padding: .6rem 1.1rem;
   border-radius: 6px;
-  border: 1px solid var(--gold);
-  background: var(--gold);
-  color: var(--on-gold);
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: var(--on-accent);
   font: 600 .9rem var(--font-body);
   text-decoration: none;
   white-space: nowrap;
@@ -559,16 +559,16 @@ h2 {
 }
 
 .btn:hover {
-  background: var(--gold-soft);
+  background: var(--heading);
 }
 
 .btn.ghost {
   background: transparent;
-  color: var(--gold);
+  color: var(--secondary);
 }
 
 .btn.ghost:hover {
-  background: var(--gold-glow);
+  background: var(--accent-glow);
 }
 
 .btn.small {
@@ -592,7 +592,7 @@ h2 {
 }
 
 .btn-link:hover {
-  color: var(--gold-soft);
+  color: var(--heading);
 }
 
 .row {
@@ -632,7 +632,7 @@ h2 {
 }
 
 .ok {
-  color: var(--gold);
+  color: var(--secondary);
   font-size: .9rem;
   margin: 0 0 .8rem;
 }
@@ -647,14 +647,14 @@ h2 {
 }
 
 button:focus-visible, a:focus-visible, input:focus-visible {
-  outline: 2px solid var(--gold-soft);
+  outline: 2px solid var(--heading);
   outline-offset: 3px;
 }
 
 /* announcements carousel */
 .ann {
-  border-color: var(--gold);
-  background: var(--gold-glow);
+  border-color: var(--accent);
+  background: var(--accent-glow);
 }
 
 .car {
@@ -686,8 +686,8 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 .badge {
   padding: .05rem .55rem;
   border-radius: 99px;
-  background: var(--gold);
-  color: var(--on-gold);
+  background: var(--accent);
+  color: var(--on-accent);
   font-size: .72rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -696,7 +696,7 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 
 .ann-title {
   font: 600 1.25rem var(--font-display);
-  color: var(--gold-soft);
+  color: var(--heading);
   margin: 0;
 }
 
@@ -710,17 +710,17 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
-  border: 1px solid var(--gold);
+  border: 1px solid var(--accent);
   background: transparent;
-  color: var(--gold);
+  color: var(--secondary);
   font: 600 1.6rem/1 var(--font-body);
   padding: 0 0 .2rem;
   cursor: pointer;
 }
 
 .arrow:hover {
-  background: var(--gold);
-  color: var(--on-gold);
+  background: var(--accent);
+  color: var(--on-accent);
 }
 
 .arrow-gap {
@@ -739,13 +739,13 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   height: .6rem;
   padding: 0;
   border-radius: 50%;
-  border: 1px solid var(--gold);
+  border: 1px solid var(--accent);
   background: transparent;
   cursor: pointer;
 }
 
 .dot.active {
-  background: var(--gold);
+  background: var(--accent);
 }
 
 /* slide transition */

@@ -258,7 +258,7 @@ const day = (iso) => new Date(iso).toLocaleDateString('en-GB', {day: 'numeric', 
 }
 
 .reveal {
-  border-color: var(--gold);
+  border-color: var(--accent);
 }
 
 .pw {
@@ -269,7 +269,7 @@ const day = (iso) => new Date(iso).toLocaleDateString('en-GB', {day: 'numeric', 
   border-radius: 6px;
   font: 600 1.15rem monospace;
   letter-spacing: .06em;
-  color: var(--gold);
+  color: var(--secondary);
   user-select: all;
 }
 
@@ -306,8 +306,8 @@ const day = (iso) => new Date(iso).toLocaleDateString('en-GB', {day: 'numeric', 
 }
 
 .seg button.on {
-  background: var(--gold);
-  color: var(--on-gold);
+  background: var(--accent);
+  color: var(--on-accent);
   font-weight: 600;
 }
 

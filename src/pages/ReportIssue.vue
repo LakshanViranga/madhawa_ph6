@@ -246,7 +246,7 @@ onMounted(async ()=> {
 
 h1 {
   font: 600 clamp(1.6rem, 4vw, 2.2rem) var(--font-display);
-  color: var(--gold-soft);
+  color: var(--heading);
   margin: 0 0 1.5rem;
 }
 
@@ -266,7 +266,7 @@ h2 {
 }
 
 a {
-  color: var(--gold);
+  color: var(--secondary);
 }
 
 .layout {
@@ -286,9 +286,9 @@ a {
 .ok {
   margin: 0 0 1rem;
   padding: .8rem 1rem;
-  border: 1px solid var(--gold);
+  border: 1px solid var(--accent);
   border-radius: 6px;
-  color: var(--gold);
+  color: var(--secondary);
   font-size: .9rem;
 }
 
@@ -326,7 +326,7 @@ textarea {
 }
 
 input:focus, select:focus, textarea:focus {
-  border-color: var(--gold);
+  border-color: var(--accent);
   outline: none;
 }
 
@@ -383,7 +383,7 @@ input:focus, select:focus, textarea:focus {
 .x {
   background: none;
   border: 0;
-  color: var(--gold);
+  color: var(--secondary);
   font: inherit;
   font-size: .8rem;
   cursor: pointer;
@@ -394,15 +394,15 @@ input:focus, select:focus, textarea:focus {
   display: inline-block;
   justify-self: start;
   padding: .6rem 1rem;
-  border: 1px dashed var(--gold);
+  border: 1px dashed var(--accent);
   border-radius: 6px;
-  color: var(--gold);
+  color: var(--secondary);
   font-weight: 600;
   cursor: pointer;
 }
 
 .add:hover, .add:focus-within {
-  background: var(--gold-glow);
+  background: var(--accent-glow);
 }
 
 .sr {
@@ -416,15 +416,15 @@ input:focus, select:focus, textarea:focus {
 .btn {
   padding: .85rem;
   border-radius: 6px;
-  border: 1px solid var(--gold);
-  background: var(--gold);
-  color: var(--on-gold);
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: var(--on-accent);
   font: 600 1rem var(--font-body);
   cursor: pointer;
 }
 
 .btn:hover {
-  background: var(--gold-soft);
+  background: var(--heading);
 }
 
 .btn:disabled {
@@ -465,10 +465,10 @@ summary {
 
 .chip {
   padding: .05rem .6rem;
-  border: 1px solid var(--gold);
+  border: 1px solid var(--accent);
   border-radius: 99px;
   font-size: .78rem;
-  color: var(--gold);
+  color: var(--secondary);
 }
 
 .chip.soft {
@@ -489,7 +489,7 @@ summary {
 
 .reply {
   padding: .8rem 1rem;
-  border-left: 3px solid var(--gold);
+  border-left: 3px solid var(--accent);
   background: var(--bg);
   border-radius: 0 6px 6px 0;
 }
@@ -499,7 +499,7 @@ summary {
 }
 
 a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
-  outline: 2px solid var(--gold-soft);
+  outline: 2px solid var(--heading);
   outline-offset: 3px;
 }
 

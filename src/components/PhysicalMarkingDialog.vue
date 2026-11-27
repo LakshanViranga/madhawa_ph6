@@ -399,7 +399,7 @@ async function save() {
 }
 
 .filebtn:focus-within {
-  outline: 2px solid var(--gold-soft);
+  outline: 2px solid var(--heading);
   outline-offset: 2px;
 }
 

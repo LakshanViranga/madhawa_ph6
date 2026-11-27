@@ -16,7 +16,7 @@ useSeo(() => ({ title: `${t('notfound.title')} | ${tutor.name}`, description: t(
       <p class="code" aria-hidden="true">404</p>
       <h1>{{ t('notfound.title') }}</h1>
       <p class="muted">{{ t('notfound.text') }}</p>
-      <div class="actions"><router-link class="btn btn-gold" to="/">{{ t('notfound.home') }}</router-link></div>
+      <div class="actions"><router-link class="btn btn-primary" to="/">{{ t('notfound.home') }}</router-link></div>
     </main>
     <SiteFooter />
   </div>
@@ -24,5 +24,5 @@ useSeo(() => ({ title: `${t('notfound.title')} | ${tutor.name}`, description: t(
 
 <style scoped>
 .nf { min-height: 55vh; display: grid; align-content: center; justify-items: start; }
-.code { margin: 0; font: 600 clamp(4rem, 15vw, 8rem) var(--font-display); color: var(--gold); line-height: 1; }
+.code { margin: 0; font: 600 clamp(4rem, 15vw, 8rem) var(--font-display); color: var(--secondary); line-height: 1; }
 </style>

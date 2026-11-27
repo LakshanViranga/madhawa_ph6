@@ -77,7 +77,7 @@ const statusClass = (s) => (s === 'new' ? 'warn' : s === 'contacted' ? 'ok' : ''
 .wa {
   display: block;
   font-size: .8rem;
-  color: var(--gold);
+  color: var(--secondary);
 }
 
 .msg {
@@ -99,7 +99,7 @@ td select.warn {
 }
 
 td select.ok {
-  border-color: var(--gold);
+  border-color: var(--accent);
 }
 
 .err {

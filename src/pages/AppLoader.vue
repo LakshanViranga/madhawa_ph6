@@ -69,7 +69,7 @@ defineProps({
   width: 40px;
   height: 40px;
   border: 3px solid var(--line);
-  border-top-color: var(--gold);
+  border-top-color: var(--accent);
   border-radius: 50%;
   animation: spin .8s linear infinite;
 }
@@ -215,7 +215,7 @@ defineProps({
 @media (prefers-reduced-motion: reduce) {
   .ring {
     animation: pulse 1.6s ease-in-out infinite;
-    border-top-color: var(--gold);
+    border-top-color: var(--accent);
   }
 
   .sk {

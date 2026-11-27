@@ -543,7 +543,7 @@ async function remove(a) {
 
 h1 {
   font: 600 clamp(1.6rem, 4vw, 2.2rem) var(--font-display);
-  color: var(--gold-soft);
+  color: var(--heading);
   margin: 0 0 .5rem;
 }
 
@@ -577,12 +577,12 @@ h2 {
 }
 
 .tab:hover {
-  color: var(--gold-soft);
+  color: var(--heading);
 }
 
 .tab.on {
-  color: var(--gold);
-  border-bottom-color: var(--gold);
+  color: var(--secondary);
+  border-bottom-color: var(--accent);
 }
 
 .tab-count {
@@ -626,8 +626,8 @@ h2 {
 }
 
 .area-preview {
-  border-color: var(--gold);
-  background: var(--gold-glow);
+  border-color: var(--accent);
+  background: var(--accent-glow);
 }
 
 .head {
@@ -647,13 +647,13 @@ h2 {
   border: 1px solid var(--line);
   border-radius: 99px;
   font-size: .8rem;
-  color: var(--gold);
+  color: var(--secondary);
 }
 
 .count.full {
-  border-color: var(--gold);
-  background: var(--gold);
-  color: var(--on-gold);
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--on-accent);
 }
 
 /* fields */
@@ -722,17 +722,17 @@ textarea {
 
 .chip {
   padding: .15rem .65rem;
-  border: 1px solid var(--gold);
+  border: 1px solid var(--accent);
   border-radius: 99px;
-  background: var(--gold-glow);
-  color: var(--gold-soft);
+  background: var(--accent-glow);
+  color: var(--heading);
   font: 500 .8rem var(--font-body);
   cursor: pointer;
 }
 
 .chip:hover {
-  background: var(--gold);
-  color: var(--on-gold);
+  background: var(--accent);
+  color: var(--on-accent);
 }
 
 .picker {
@@ -764,11 +764,11 @@ textarea {
 
 .opt:hover,
 .opt.on {
-  background: var(--gold-glow);
+  background: var(--accent-glow);
 }
 
 .opt.on {
-  border-color: var(--gold);
+  border-color: var(--accent);
 }
 
 .opt.off {
@@ -778,7 +778,7 @@ textarea {
 
 .opt input,
 .check input {
-  accent-color: var(--gold);
+  accent-color: var(--accent);
 }
 
 .what {
@@ -811,8 +811,8 @@ textarea {
 }
 
 .card.on {
-  border-color: var(--gold);
-  background: var(--gold-glow);
+  border-color: var(--accent);
+  background: var(--accent-glow);
 }
 
 .card input[type='datetime-local'] {
@@ -845,8 +845,8 @@ textarea {
 .badge {
   padding: .05rem .55rem;
   border-radius: 99px;
-  background: var(--gold);
-  color: var(--on-gold);
+  background: var(--accent);
+  color: var(--on-accent);
   font-size: .72rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -855,7 +855,7 @@ textarea {
 
 .ann-title {
   font: 600 1.25rem var(--font-display);
-  color: var(--gold-soft);
+  color: var(--heading);
   margin: 0;
   overflow-wrap: anywhere;
 }
@@ -909,9 +909,9 @@ textarea {
 }
 
 .filter.on {
-  border-color: var(--gold);
-  background: var(--gold-glow);
-  color: var(--gold-soft);
+  border-color: var(--accent);
+  background: var(--accent-glow);
+  color: var(--heading);
 }
 
 /* posted list */
@@ -957,12 +957,12 @@ textarea {
 }
 
 .pill.live {
-  border-color: var(--gold);
-  color: var(--gold);
+  border-color: var(--accent);
+  color: var(--secondary);
 }
 
 .pill.scheduled {
-  color: var(--gold-soft);
+  color: var(--heading);
 }
 
 .post .body {
@@ -1005,25 +1005,25 @@ textarea {
   display: inline-block;
   padding: .6rem 1.1rem;
   border-radius: 6px;
-  border: 1px solid var(--gold);
-  background: var(--gold);
-  color: var(--on-gold);
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: var(--on-accent);
   font: 600 .9rem var(--font-body);
   white-space: nowrap;
   cursor: pointer;
 }
 
 .btn:hover {
-  background: var(--gold-soft);
+  background: var(--heading);
 }
 
 .btn.ghost {
   background: transparent;
-  color: var(--gold);
+  color: var(--secondary);
 }
 
 .btn.ghost:hover {
-  background: var(--gold-glow);
+  background: var(--accent-glow);
 }
 
 .btn.small {
@@ -1053,7 +1053,7 @@ textarea {
 }
 
 .btn-link:hover:not(:disabled) {
-  color: var(--gold-soft);
+  color: var(--heading);
 }
 
 .btn-link:disabled {
@@ -1079,13 +1079,13 @@ textarea {
 }
 
 .ok {
-  color: var(--gold);
+  color: var(--secondary);
   font-size: .95rem;
   font-weight: 600;
 }
 
 button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible {
-  outline: 2px solid var(--gold-soft);
+  outline: 2px solid var(--heading);
   outline-offset: 3px;
 }
 

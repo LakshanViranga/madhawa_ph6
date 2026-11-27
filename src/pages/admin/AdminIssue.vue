@@ -329,8 +329,8 @@ onMounted(async ()=> {
 }
 
 .seg button.on {
-  background: var(--gold);
-  color: var(--on-gold);
+  background: var(--accent);
+  color: var(--on-accent);
   font-weight: 600;
 }
 
@@ -376,12 +376,12 @@ onMounted(async ()=> {
 }
 
 .item:hover {
-  border-color: var(--gold);
+  border-color: var(--accent);
 }
 
 .item.on {
-  border-color: var(--gold);
-  background: var(--gold-glow);
+  border-color: var(--accent);
+  background: var(--accent-glow);
 }
 
 .subject {
@@ -470,9 +470,9 @@ onMounted(async ()=> {
 .ok {
   margin: 0 0 1rem;
   padding: .7rem 1rem;
-  border: 1px solid var(--gold);
+  border: 1px solid var(--accent);
   border-radius: 6px;
-  color: var(--gold);
+  color: var(--secondary);
   font-size: .9rem;
 }
 

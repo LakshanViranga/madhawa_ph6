@@ -80,7 +80,7 @@ const askLink = computed(() => (props.cls ? waLink(t('classes.waText', {name: L(
       <p class="note">{{ t('classes.feeNote') }}</p>
 
       <div class="actions">
-        <button class="btn btn-gold" type="button" @click="emit('join', cls)">{{ t('classes.join') }}</button>
+        <button class="btn btn-primary" type="button" @click="emit('join', cls)">{{ t('classes.join') }}</button>
         <a class="btn btn-line" :href="askLink" target="_blank" rel="noopener">{{ t('classes.askWhatsapp') }}</a>
       </div>
     </article>
@@ -93,7 +93,7 @@ const askLink = computed(() => (props.cls ? waLink(t('classes.waText', {name: L(
   max-height: calc(100vh - 2rem);
   padding: 0;
   overflow: auto;
-  border: 1px solid var(--gold);
+  border: 1px solid var(--accent);
   border-radius: 8px;
   background: var(--surface);
   color: var(--text);
@@ -127,8 +127,8 @@ const askLink = computed(() => (props.cls ? waLink(t('classes.waText', {name: L(
 }
 
 .x:hover {
-  border-color: var(--gold);
-  color: var(--gold);
+  border-color: var(--accent);
+  color: var(--secondary);
 }
 
 .img {
@@ -139,14 +139,14 @@ const askLink = computed(() => (props.cls ? waLink(t('classes.waText', {name: L(
 h2 {
   margin: 0 0 .5rem;
   font: 600 1.7rem var(--font-display);
-  color: var(--gold-soft);
+  color: var(--heading);
   line-height: 1.15;
 }
 
 h3 {
   margin: 1.4rem 0 .4rem;
   font: 600 1.05rem var(--font-display);
-  color: var(--gold);
+  color: var(--secondary);
 }
 
 p {
@@ -178,7 +178,7 @@ li {
 .note {
   margin-top: 1.4rem;
   padding: .75rem 1rem;
-  border: 1px dashed var(--gold);
+  border: 1px dashed var(--accent);
   border-radius: 6px;
   color: var(--muted);
   font-size: .92rem;
@@ -192,7 +192,7 @@ li {
 }
 
 .x:focus-visible {
-  outline: 2px solid var(--gold-soft);
+  outline: 2px solid var(--heading);
   outline-offset: 2px;
 }
 </style>

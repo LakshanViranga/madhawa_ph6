@@ -122,20 +122,20 @@ async function submit() {
   display: grid;
   gap: 1.1rem;
   padding: 2rem;
-  border: 1px solid var(--gold);
+  border: 1px solid var(--accent);
   border-radius: 6px;
   background: var(--surface);
 }
 
 .brand {
   font: 600 1.3rem var(--font-display);
-  color: var(--gold);
+  color: var(--secondary);
   text-decoration: none;
 }
 
 h1 {
   font: 600 1.9rem var(--font-display);
-  color: var(--gold-soft);
+  color: var(--heading);
   margin: 0;
 }
 
@@ -164,7 +164,7 @@ input {
 }
 
 input:focus {
-  border-color: var(--gold);
+  border-color: var(--accent);
   outline: none;
 }
 
@@ -184,7 +184,7 @@ input:focus {
   transform: translateY(-50%);
   background: none;
   border: 0;
-  color: var(--gold);
+  color: var(--secondary);
   font: 600 .85rem var(--font-body);
   cursor: pointer;
 }
@@ -198,15 +198,15 @@ input:focus {
 .go {
   padding: .85rem;
   border-radius: 6px;
-  border: 1px solid var(--gold);
-  background: var(--gold);
-  color: var(--on-gold);
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: var(--on-accent);
   font: 600 1rem var(--font-body);
   cursor: pointer;
 }
 
 .go:hover:not(:disabled) {
-  background: var(--gold-soft);
+  background: var(--heading);
 }
 
 .go:disabled {
@@ -215,13 +215,13 @@ input:focus {
 }
 
 .back {
-  color: var(--gold);
+  color: var(--secondary);
   font-size: .9rem;
   text-decoration: none;
 }
 
 a:focus-visible, button:focus-visible, input:focus-visible {
-  outline: 2px solid var(--gold-soft);
+  outline: 2px solid var(--heading);
   outline-offset: 3px;
 }
 </style>

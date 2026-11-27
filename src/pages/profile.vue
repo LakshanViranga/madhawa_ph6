@@ -394,7 +394,7 @@ function closeDeleteDialog() {
 
 h1 {
   font: 600 clamp(1.6rem, 4vw, 2.2rem) var(--font-display);
-  color: var(--gold-soft);
+  color: var(--heading);
   margin: 0 0 .5rem;
 }
 
@@ -426,7 +426,7 @@ h2 {
 }
 
 .profile-panel {
-  border-color: var(--gold);
+  border-color: var(--accent);
 }
 
 .panel-heading {
@@ -483,8 +483,8 @@ h2 {
 
 .field input:focus,
 .confirm-field input:focus {
-  border-color: var(--gold);
-  box-shadow: 0 0 0 2px var(--gold-glow);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent-glow);
 }
 
 .field input:read-only {
@@ -501,9 +501,9 @@ h2 {
   display: inline-block;
   padding: .65rem 1.2rem;
   border-radius: 6px;
-  border: 1px solid var(--gold);
-  background: var(--gold);
-  color: var(--on-gold);
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: var(--on-accent);
   font: 600 .92rem var(--font-body);
   text-decoration: none;
   cursor: pointer;
@@ -511,16 +511,16 @@ h2 {
 }
 
 .btn:hover {
-  background: var(--gold-soft);
+  background: var(--heading);
 }
 
 .btn.ghost {
   background: transparent;
-  color: var(--gold);
+  color: var(--secondary);
 }
 
 .btn.ghost:hover {
-  background: var(--gold-glow);
+  background: var(--accent-glow);
 }
 
 .btn:disabled,
@@ -597,7 +597,7 @@ h2 {
 }
 
 .ok {
-  color: var(--gold);
+  color: var(--secondary);
   font-size: .9rem;
   margin: .8rem 0 0;
 }
@@ -607,7 +607,7 @@ h2 {
   padding: 0;
   margin-left: .5rem;
   background: transparent;
-  color: var(--gold);
+  color: var(--secondary);
   text-decoration: underline;
   cursor: pointer;
   font: inherit;
@@ -709,7 +709,7 @@ h2 {
 
 button:focus-visible,
 input:focus-visible {
-  outline: 2px solid var(--gold-soft);
+  outline: 2px solid var(--heading);
   outline-offset: 3px;
 }
 </style>

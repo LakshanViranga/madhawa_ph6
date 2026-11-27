@@ -282,14 +282,14 @@ const paper = computed(() => (quiz.value?.paper && safeHref(quiz.value.paper.url
 .ok {
   margin: 0 0 1rem;
   padding: .6rem 1rem;
-  border: 1px solid var(--gold);
+  border: 1px solid var(--accent);
   border-radius: 6px;
-  color: var(--gold);
+  color: var(--secondary);
   font-size: .9rem;
 }
 
 a {
-  color: var(--gold);
+  color: var(--secondary);
 }
 
 .mk-grid {
@@ -334,12 +334,12 @@ a {
 }
 
 .who:hover {
-  border-color: var(--gold);
+  border-color: var(--accent);
 }
 
 .who.on {
-  border-color: var(--gold);
-  background: var(--gold-glow);
+  border-color: var(--accent);
+  background: var(--accent-glow);
 }
 
 .who small {
@@ -406,7 +406,7 @@ a {
 
 .answer {
   padding: .7rem .9rem;
-  border-left: 3px solid var(--gold);
+  border-left: 3px solid var(--accent);
   background: var(--surface);
   border-radius: 0 6px 6px 0;
   display: grid;
@@ -462,7 +462,7 @@ textarea {
 }
 
 input:focus, textarea:focus {
-  border-color: var(--gold);
+  border-color: var(--accent);
   outline: none;
 }
 
@@ -488,7 +488,7 @@ input:focus, textarea:focus {
 }
 
 .mk-foot .total b {
-  color: var(--gold);
+  color: var(--secondary);
   font: 600 1.3rem var(--font-display);
 }
 
@@ -504,7 +504,7 @@ input:focus, textarea:focus {
 }
 
 button:focus-visible, a:focus-visible, summary:focus-visible, input:focus-visible, textarea:focus-visible {
-  outline: 2px solid var(--gold-soft);
+  outline: 2px solid var(--heading);
   outline-offset: 3px;
 }
 

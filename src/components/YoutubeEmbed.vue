@@ -83,8 +83,8 @@ const hide = (e) => {
   display: grid;
   place-items: center;
   border-radius: 50%;
-  background: var(--gold);
-  color: var(--on-gold);
+  background: var(--accent);
+  color: var(--on-accent);
 }
 
 .poster:hover .play {
@@ -92,7 +92,7 @@ const hide = (e) => {
 }
 
 .poster:focus-visible {
-  outline: 2px solid var(--gold-soft);
+  outline: 2px solid var(--heading);
   outline-offset: -4px;
 }
 </style>

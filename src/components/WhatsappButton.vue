@@ -27,8 +27,8 @@ const {t} = useI18n()
   gap: .5rem;
   padding: .75rem 1rem;
   border-radius: 99px;
-  background: var(--gold);
-  color: var(--on-gold);
+  background: var(--accent);
+  color: var(--on-accent);
   text-decoration: none;
   font: 600 .9rem var(--font-body);
   box-shadow: 0 4px 14px rgba(0, 0, 0, .35);
@@ -37,7 +37,7 @@ const {t} = useI18n()
 
 .wa:hover {
   transform: translateY(-2px);
-  background: var(--gold-soft);
+  background: var(--heading);
 }
 
 .wa:focus-visible {

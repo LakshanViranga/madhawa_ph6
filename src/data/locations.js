@@ -4,8 +4,8 @@
 // held at a venue, so the schedule can be filtered by location.
 export const locations = [
     {
-        id: 'colombo',
-        name: 'Colombo',
+        id: 'pelmadulla',
+        name: 'Pelmadulla',
         place: 'Institute name, street',
         address: 'Full address here',
         days: 'Sat, Sun',
@@ -13,8 +13,8 @@ export const locations = [
         phone: '',
     },
     {
-        id: 'negombo',
-        name: 'Negombo',
+        id: 'balangoda',
+        name: 'Balangoda',
         place: 'Institute name, street',
         address: 'Full address here',
         days: 'Wed, Fri',
@@ -22,8 +22,8 @@ export const locations = [
         phone: '',
     },
     {
-        id: 'kandy',
-        name: 'Kandy',
+        id: 'rathnapura',
+        name: 'Rathnapura',
         place: 'Institute name, street',
         address: 'Full address here',
         days: 'Sun',

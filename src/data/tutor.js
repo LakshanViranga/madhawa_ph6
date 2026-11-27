@@ -1,6 +1,6 @@
 // The tutor's details. Header, footer, contact section and every page read from here.
 export const tutor = {
-    name: 'Ravishka Amarasekare',
+    name: 'Madhawa K. Wijerathna',
     tagline: 'A/L Physics classes Sri Lanka | Physical and Online Both | Sinhala Medium',
     whatsapp: '+94740593882', // country code and number, no + or spaces
     phone: '074 059 3882',

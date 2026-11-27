@@ -48,7 +48,7 @@ const items = [
           <template v-else>{{ t('comingsoon.openingDefault') }}</template>
         </p>
         <div class="actions">
-          <a class="btn btn-gold" :href="waLink(t('comingsoon.waText'))" target="_blank"
+          <a class="btn btn-primary" :href="waLink(t('comingsoon.waText'))" target="_blank"
              rel="noopener">{{ t('comingsoon.notify') }}</a>
           <router-link class="btn btn-line" to="/">{{ t('comingsoon.home') }}</router-link>
         </div>
@@ -109,7 +109,7 @@ const items = [
 
 .wave path {
   fill: none;
-  stroke: var(--gold);
+  stroke: var(--accent);
   stroke-width: 2;
   stroke-dasharray: 2400;
   stroke-dashoffset: 2400;
@@ -134,9 +134,9 @@ const items = [
   align-items: center;
   gap: .6rem;
   padding: .3rem 1rem;
-  border: 1px solid var(--gold);
+  border: 1px solid var(--accent);
   border-radius: 99px;
-  color: var(--gold);
+  color: var(--secondary);
   font-size: .85rem;
   font-weight: 600;
 }
@@ -145,7 +145,7 @@ const items = [
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--gold);
+  background: var(--accent);
   animation: pulse 1.8s ease-in-out infinite;
 }
 
@@ -164,7 +164,7 @@ h1 {
   margin: 1.25rem 0 1rem;
   font-size: clamp(3rem, 11vw, 6.5rem) !important;
   letter-spacing: -.02em;
-  background: linear-gradient(90deg, var(--gold-soft), var(--gold));
+  background: linear-gradient(90deg, var(--heading), var(--accent));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent !important;
@@ -183,7 +183,7 @@ h1 {
 }
 
 .opening b {
-  color: var(--gold);
+  color: var(--secondary);
 }
 
 .intro .actions {
@@ -213,7 +213,7 @@ h1 {
 }
 
 .icon {
-  color: var(--gold);
+  color: var(--secondary);
   margin-bottom: .75rem;
 }
 
@@ -234,7 +234,7 @@ h1 {
 .meanwhile h2 {
   font-size: 1.4rem !important;
   margin: 0 0 1rem !important;
-  color: var(--gold-soft);
+  color: var(--heading);
 }
 
 .links {
@@ -257,11 +257,11 @@ h1 {
 }
 
 .links a:hover {
-  border-color: var(--gold);
+  border-color: var(--accent);
 }
 
 .links a span {
-  color: var(--gold);
+  color: var(--secondary);
 }
 
 @media (max-width: 760px) {

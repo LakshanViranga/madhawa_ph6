@@ -300,7 +300,7 @@ li {
 }
 
 li.on {
-  background: var(--gold-glow);
+  background: var(--accent-glow);
 }
 
 .who {
@@ -347,7 +347,7 @@ li.on {
 }
 
 .ok {
-  color: var(--gold);
+  color: var(--secondary);
 }
 
 .err {
@@ -357,9 +357,9 @@ li.on {
 .btn {
   padding: .5rem .9rem;
   border-radius: 6px;
-  border: 1px solid var(--gold);
-  background: var(--gold);
-  color: var(--on-gold);
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: var(--on-accent);
   font: 600 .85rem var(--font-body);
   cursor: pointer;
 }
@@ -371,7 +371,7 @@ li.on {
 
 .btn.ghost {
   background: transparent;
-  color: var(--gold);
+  color: var(--secondary);
 }
 
 .btn.danger {
@@ -386,7 +386,7 @@ li.on {
 }
 
 button:focus-visible, input:focus-visible {
-  outline: 2px solid var(--gold-soft);
+  outline: 2px solid var(--heading);
   outline-offset: 2px;
 }
 </style>

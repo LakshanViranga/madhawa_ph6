@@ -91,7 +91,7 @@ const creditIsFacebook = /facebook\.com/i.test(credit.url)
 }
 
 .foot a {
-  color: var(--gold);
+  color: var(--secondary);
   text-decoration: none;
 }
 
@@ -136,14 +136,14 @@ const creditIsFacebook = /facebook\.com/i.test(credit.url)
   height: 42px;
   border: 1px solid var(--line);
   border-radius: 50%;
-  color: var(--gold);
+  color: var(--secondary);
   transition: background .15s, border-color .15s, color .15s;
 }
 
 .social a:hover {
-  background: var(--gold);
-  border-color: var(--gold);
-  color: var(--on-gold);
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--on-accent);
   text-decoration: none;
 }
 
@@ -164,7 +164,7 @@ const creditIsFacebook = /facebook\.com/i.test(credit.url)
 }
 
 .credit b, .credit .by {
-  color: var(--gold);
+  color: var(--secondary);
   font-weight: 600;
 }
 
@@ -184,7 +184,7 @@ const creditIsFacebook = /facebook\.com/i.test(credit.url)
 }
 
 a:focus-visible {
-  outline: 2px solid var(--gold-soft);
+  outline: 2px solid var(--heading);
   outline-offset: 3px;
 }
 

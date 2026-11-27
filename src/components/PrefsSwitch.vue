@@ -52,15 +52,15 @@ button {
   place-items: center;
   width: 34px;
   height: 34px;
-  color: var(--gold);
+  color: var(--secondary);
 }
 
 select:hover, button:hover {
-  border-color: var(--gold);
+  border-color: var(--accent);
 }
 
 select:focus-visible, button:focus-visible {
-  outline: 2px solid var(--gold-soft);
+  outline: 2px solid var(--heading);
   outline-offset: 2px;
 }
 </style>

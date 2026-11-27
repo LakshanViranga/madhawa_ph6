@@ -24,13 +24,13 @@ const {t} = useI18n()
 const {L} = useLocalized()
 
 useHead({
-  title: 'Ravishka D. Amarasekare | A/L Physics classes | Online & Physical',
+  title: 'Madhawa K. Wijerathna | A/L Physics classes | Online & Physical',
   meta: [
     {
       name: 'description',
       content: 'Trusted A/L Physics classes with weekly quizzes and clear progress tracking. Online and Physical Classes in Sinhala'
     },
-    {property: 'og:title', content: 'Tharka | Ravishka D. Amarasekare | A/L Physics classes'},
+    {property: 'og:title', content: 'MKW Physics | Madhawa K. Wijerathna | A/L Physics classes'},
     {
       property: 'og:description',
       content: 'Physics, taught so it stays with you. Weekly quizzes, clear progress tracking, Online and Physical Sinhala classes.'
@@ -90,24 +90,24 @@ const titleWords = computed(() => t('hero.title').split(' '))
 
 /* ---------- Program explorer ---------- */
 const selId = ref(classes[0]?.id)
-const chip = ref('') // '' = all sessions, 'online', or a location id
+const chip = ref('') // '' = all sessions, 'online', or text found in a session's `where` (a location name)
 const selected = computed(() => classes.find((c) => c.id === selId.value) || classes[0])
 const chips = computed(() => [
   {id: '', label: 'All'},
   {id: 'online', label: 'Online'},
-  ...locations.map((l) => ({id: l.id, label: l.name})),
+  ...locations.map((l) => ({id: l.name, label: l.name})),
 ])
+const isOnline = (r) => /online|zoom/i.test(r.where || '')
 const sessions = computed(() => {
   if (!selected.value) return []
-  const mine = timetable.filter((r) => L(r.class) === L(selected.value.title))
-  const rows = mine.length ? mine : timetable // fall back to the whole timetable if names do not match
+  const rows = timetable.filter((r) => r.classId === selected.value.id)
   return rows.filter((r) => {
-    if (chip.value === 'online') return r.where !== 'physical'
-    if (chip.value) return r.venue === chip.value
+    if (chip.value === 'online') return isOnline(r)
+    if (chip.value) return (r.where || '').toLowerCase().includes(chip.value.toLowerCase())
     return true
   })
 })
-const venueName = (r) => (r.venue ? locations.find((x) => x.id === r.venue)?.name : '') || (r.where === 'physical' ? 'Physical' : 'Online')
+const venueName = (r) => r.where || (isOnline(r) ? 'Online' : 'Physical')
 
 async function pickVenue(id) {
   chip.value = id
@@ -218,12 +218,12 @@ const about = [
           </div>
 
           <figure class="tile t-photo">
-            <img src="/profile.jpeg" :alt="tutor.name" @error="hide"/>
-            <figcaption><b>{{ tutor.name }}</b><span>BSc (Hons) Engineering, University of Moratuwa</span></figcaption>
+            <img src="/images/profile.webp" :alt="tutor.name" @error="hide"/>
+            <figcaption><b>{{ tutor.name }}</b><span>BSc (Hons) Engineering, University of Ruhuna</span></figcaption>
           </figure>
 
-          <div class="tile t-stat"><b v-count="{ to: 5, suffix: '+' }"></b><span>years teaching A/L Physics</span></div>
-          <div class="tile t-stat"><b v-count="{ to: 1000, suffix: '+' }"></b><span>students taught</span></div>
+          <div class="tile t-stat"><b v-count="{ to: 8, suffix: '+' }"></b><span>years teaching A/L Physics</span></div>
+          <div class="tile t-stat"><b v-count="{ to: 3000, suffix: '+' }"></b><span>students taught</span></div>
           <div class="tile t-stat t-accent"><b v-count="{ to: 95, suffix: '%' }"></b><span>passed with A, B or C</span>
           </div>
           <a class="tile t-stat t-link" href="#locations"><b v-count="{ to: locations.length }"></b><span>physical locations, plus online</span></a>
@@ -240,9 +240,7 @@ const about = [
                 <button type="button" role="tab" :aria-selected="c.id === selId" :class="{ on: c.id === selId }"
                         @click="selId = c.id">
                   <b>{{ L(c.title) }}</b>
-                  <span>{{
-                      c.mode === 'both' ? `${t('classes.physical')} + ${t('classes.online')}` : t(c.mode === 'online' ? 'classes.online' : 'classes.physical')
-                    }}</span>
+                  <span>{{ L(c.mode) }}</span>
                 </button>
               </li>
             </ul>
@@ -273,7 +271,7 @@ const about = [
                   <ul>
                     <li v-for="(r, i) in sessions" :key="i">
                       <b>{{ L(r.day) }}</b><span>{{ L(r.time) }}</span><span class="tag"
-                                                                             :class="{ on: r.where !== 'physical' }">{{
+                                                                             :class="{ on: isOnline(r) }">{{
                         venueName(r)
                       }}</span>
                     </li>
@@ -292,7 +290,7 @@ const about = [
           <h2>Where we teach</h2>
           <ul class="places">
             <li v-for="(l, i) in locations" :key="l.id" v-reveal :style="{ '--i': i }">
-              <button class="place-name" type="button" @click="pickVenue(l.id)">{{ l.name }}<span
+              <button class="place-name" type="button" @click="pickVenue(l.name)">{{ l.name }}<span
                   aria-hidden="true">+</span></button>
               <div class="place-info">
                 <b>{{ l.place }}</b>

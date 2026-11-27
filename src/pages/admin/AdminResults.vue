@@ -441,7 +441,7 @@ function exportCsv() {
 
 <style scoped>
 /* Colours and fonts come only from the project theme variables (--bg, --surface, --line, --text, --muted,
-   --gold, --gold-soft, --gold-glow, --on-gold, --danger, --font-body, --font-display), the same ones the other
+   --accent, --heading, --accent-glow, --on-accent, --danger, --font-body, --font-display), the same ones the other
    pages use. No fixed colours, and nothing here reaches outside this page. */
 
 .results-page,
@@ -507,24 +507,24 @@ h3 {
   gap: 8px;
   min-height: 40px;
   padding: 0 1.2rem;
-  border: 1px solid var(--gold);
+  border: 1px solid var(--accent);
   border-radius: 6px;
-  background: var(--gold);
-  color: var(--on-gold);
+  background: var(--accent);
+  color: var(--on-accent);
   font: 600 0.92rem var(--font-body);
 }
 
 .btn:hover {
-  background: var(--gold-soft);
+  background: var(--heading);
 }
 
 .btn.ghost {
   background: transparent;
-  color: var(--gold);
+  color: var(--secondary);
 }
 
 .btn.ghost:hover {
-  background: var(--gold-glow);
+  background: var(--accent-glow);
 }
 
 .btn:disabled {
@@ -595,7 +595,7 @@ h3 {
 }
 
 .search-box input:focus {
-  border-color: var(--gold);
+  border-color: var(--accent);
 }
 
 .class-grid {
@@ -617,8 +617,8 @@ h3 {
 }
 
 .class-card:hover {
-  border-color: var(--gold);
-  background: var(--gold-glow);
+  border-color: var(--accent);
+  background: var(--accent-glow);
 }
 
 .class-card-main {
@@ -635,10 +635,10 @@ h3 {
   height: 42px;
   flex: 0 0 42px;
   place-items: center;
-  border: 1px solid var(--gold);
+  border: 1px solid var(--accent);
   border-radius: 6px;
-  background: var(--gold-glow);
-  color: var(--gold);
+  background: var(--accent-glow);
+  color: var(--secondary);
   font: 600 1rem var(--font-display);
 }
 
@@ -669,7 +669,7 @@ h3 {
 }
 
 .view-link {
-  color: var(--gold);
+  color: var(--secondary);
   font-weight: 600;
 }
 
@@ -801,13 +801,13 @@ h3 {
   padding: 0;
   border: 0;
   background: transparent;
-  color: var(--gold);
+  color: var(--secondary);
   font-size: 0.85rem;
   font-weight: 600;
 }
 
 .back-button:hover {
-  color: var(--gold-soft);
+  color: var(--heading);
   text-decoration: underline;
 }
 
@@ -861,7 +861,7 @@ h3 {
 }
 
 .filter select:focus {
-  border-color: var(--gold);
+  border-color: var(--accent);
 }
 
 /* Empty test state */
@@ -934,7 +934,7 @@ h3 {
 }
 
 .recent-test:hover {
-  background: var(--gold-glow);
+  background: var(--accent-glow);
 }
 
 .recent-test strong,
@@ -953,7 +953,7 @@ h3 {
 }
 
 .recent-test > span {
-  color: var(--gold);
+  color: var(--secondary);
 }
 
 /* Selected test */
@@ -965,14 +965,14 @@ h3 {
   gap: 20px;
   margin-bottom: 18px;
   padding: 21px 23px;
-  border: 1px solid var(--gold);
+  border: 1px solid var(--accent);
   border-radius: 6px;
   background: var(--surface);
 }
 
 .selected-test-type {
   margin-bottom: 6px;
-  color: var(--gold);
+  color: var(--secondary);
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -1019,7 +1019,7 @@ h3 {
 .stat strong {
   display: block;
   margin-bottom: 6px;
-  color: var(--gold);
+  color: var(--secondary);
   font: 600 1.9rem/1.1 var(--font-display);
 }
 
@@ -1114,7 +1114,7 @@ tbody tr:last-child td {
 
 .marks {
   width: 64px;
-  color: var(--gold);
+  color: var(--secondary);
   font-weight: 600;
   white-space: nowrap;
 }
@@ -1135,7 +1135,7 @@ tbody tr:last-child td {
   height: 100%;
   min-width: 3px;
   border-radius: inherit;
-  background: var(--gold);
+  background: var(--accent);
   transition: width 0.3s;
 }
 
@@ -1184,7 +1184,7 @@ tbody tr:last-child td {
 button:focus-visible,
 input:focus-visible,
 select:focus-visible {
-  outline: 2px solid var(--gold-soft);
+  outline: 2px solid var(--heading);
   outline-offset: 3px;
 }
 

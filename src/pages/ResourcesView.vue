@@ -104,17 +104,17 @@ const count = (k) => (k === 'all' ? resources.length : resources.filter((r) => r
 }
 
 .tab:hover {
-  border-color: var(--gold);
+  border-color: var(--accent);
 }
 
 .tab.on {
-  background: var(--gold);
-  border-color: var(--gold);
-  color: var(--on-gold);
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--on-accent);
 }
 
 .tab.on span {
-  color: var(--on-gold);
+  color: var(--on-accent);
 }
 
 .meta {

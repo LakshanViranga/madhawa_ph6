@@ -502,13 +502,13 @@ onUnmounted(() => clearInterval(timer))
 .back {
   display: inline-block;
   margin-bottom: 1rem;
-  color: var(--gold);
+  color: var(--secondary);
   font-size: .9rem;
 }
 
 h1 {
   font: 600 clamp(1.6rem, 4vw, 2.2rem) var(--font-display);
-  color: var(--gold-soft);
+  color: var(--heading);
   margin: 0 0 1.5rem;
 }
 
@@ -528,11 +528,11 @@ h2.sub {
 }
 
 .gold {
-  color: var(--gold);
+  color: var(--secondary);
 }
 
 a {
-  color: var(--gold);
+  color: var(--secondary);
 }
 
 .ranks {
@@ -542,7 +542,7 @@ a {
   flex-wrap: wrap;
   padding: 1rem 1.4rem;
   margin-bottom: 1.5rem;
-  border: 1px solid var(--gold);
+  border: 1px solid var(--accent);
   border-radius: 6px;
   background: var(--surface);
   color: var(--text);
@@ -557,7 +557,7 @@ a {
 
 .ranks b {
   font: 600 1.8rem var(--font-display);
-  color: var(--gold);
+  color: var(--secondary);
 }
 
 .ranks i {
@@ -568,7 +568,7 @@ a {
 
 .ranks .go {
   margin-left: auto;
-  color: var(--gold);
+  color: var(--secondary);
   font-weight: 600;
 }
 
@@ -596,7 +596,7 @@ a {
 }
 
 .quiz.open {
-  border-color: var(--gold);
+  border-color: var(--accent);
 }
 
 .quiz.upcoming {
@@ -612,17 +612,17 @@ a {
 
 .tag {
   font-size: .8rem;
-  color: var(--gold);
+  color: var(--secondary);
 }
 
 .chip {
   display: inline-block;
   margin: .4rem .4rem 0 0;
   padding: .05rem .6rem;
-  border: 1px solid var(--gold);
+  border: 1px solid var(--accent);
   border-radius: 99px;
   font-size: .78rem;
-  color: var(--gold);
+  color: var(--secondary);
 }
 
 .chip.soft {
@@ -643,7 +643,7 @@ a {
 
 .mark {
   font: 600 1.8rem var(--font-display);
-  color: var(--gold);
+  color: var(--secondary);
 }
 
 .mark small, .result small {
@@ -687,7 +687,7 @@ a {
 
 .fill {
   height: 100%;
-  background: var(--gold);
+  background: var(--accent);
   border-radius: 4px;
   transition: width .3s;
 }
@@ -695,24 +695,24 @@ a {
 .btn {
   padding: .7rem 1.3rem;
   border-radius: 6px;
-  border: 1px solid var(--gold);
-  background: var(--gold);
-  color: var(--on-gold);
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: var(--on-accent);
   font: 600 .95rem var(--font-body);
   cursor: pointer;
 }
 
 .btn:hover {
-  background: var(--gold-soft);
+  background: var(--heading);
 }
 
 .btn.ghost {
   background: transparent;
-  color: var(--gold);
+  color: var(--secondary);
 }
 
 .btn.ghost:hover {
-  background: var(--gold-glow);
+  background: var(--accent-glow);
 }
 
 .btn:disabled {
@@ -723,7 +723,7 @@ a {
 .link {
   background: none;
   border: 0;
-  color: var(--gold);
+  color: var(--secondary);
   cursor: pointer;
   font: inherit;
   padding: 0;
@@ -747,8 +747,8 @@ a {
 
 .clock {
   font: 600 1.3rem var(--font-display);
-  color: var(--gold);
-  border: 1px solid var(--gold);
+  color: var(--secondary);
+  border: 1px solid var(--accent);
   border-radius: 6px;
   padding: .2rem .8rem;
 }
@@ -794,13 +794,13 @@ a {
 }
 
 .lbtn:hover {
-  border-color: var(--gold);
+  border-color: var(--accent);
 }
 
 .lbtn.on {
-  background: var(--gold);
-  border-color: var(--gold);
-  color: var(--on-gold);
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--on-accent);
 }
 
 .nav {
@@ -831,7 +831,7 @@ textarea {
 }
 
 textarea:focus-visible, input[type='file']:focus-visible {
-  outline: 2px solid var(--gold-soft);
+  outline: 2px solid var(--heading);
   outline-offset: 2px;
 }
 
@@ -881,7 +881,7 @@ input[type='file'] {
 
 .result b {
   font: 600 3.2rem var(--font-display);
-  color: var(--gold);
+  color: var(--secondary);
 }
 
 .result b.wait {
@@ -890,7 +890,7 @@ input[type='file'] {
 }
 
 button:focus-visible, a:focus-visible {
-  outline: 2px solid var(--gold-soft);
+  outline: 2px solid var(--heading);
   outline-offset: 3px;
 }
 

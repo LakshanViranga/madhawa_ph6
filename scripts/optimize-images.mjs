@@ -10,7 +10,7 @@ import path from 'node:path'
 import sharp from 'sharp'
 
 const SOURCE = process.argv[2] || 'image-source'
-const OUTPUT = process.argv[3] || 'public/images/quiz'
+const OUTPUT = process.argv[3] || 'public/images'
 const QUALITY = 80
 const DEFAULT_WIDTH = 1200
 const THUMB = { prefix: 'gallery-', width: 640, quality: 75 } // the tile shown in the gallery grid

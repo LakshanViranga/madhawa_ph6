@@ -15,7 +15,7 @@ const {form, sending, sent, failed, error, submit} = useRegistration()
     <h3>{{ t('contact.sentTitle') }}</h3>
     <p>{{ t('contact.sentText') }}</p>
     <p class="muted">{{ t('contact.whatsappAlso') }}</p>
-    <a class="btn btn-gold" :href="waLink(t('site.whatsappText'))" target="_blank"
+    <a class="btn btn-primary" :href="waLink(t('site.whatsappText'))" target="_blank"
        rel="noopener">{{ t('contact.whatsapp') }}</a>
   </div>
 
@@ -48,7 +48,7 @@ const {form, sending, sent, failed, error, submit} = useRegistration()
           t('contact.whatsapp')
         }}</a>
     </p>
-    <button class="btn btn-gold" type="submit" :disabled="sending">
+    <button class="btn btn-primary" type="submit" :disabled="sending">
       {{ sending ? t('contact.sending') : t('contact.submit') }}
     </button>
   </form>
@@ -65,7 +65,7 @@ const {form, sending, sent, failed, error, submit} = useRegistration()
 
 .done {
   padding: 1.5rem;
-  border: 1px solid var(--gold);
+  border: 1px solid var(--accent);
   border-radius: 6px;
 }
 

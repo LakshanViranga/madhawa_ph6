@@ -374,7 +374,7 @@ onBeforeUnmount(() => {
 
 .brand {
   font: 600 1.2rem var(--font-display);
-  color: var(--gold);
+  color: var(--secondary);
   text-decoration: none;
   flex-shrink: 0;
 }
@@ -393,8 +393,8 @@ onBeforeUnmount(() => {
 }
 
 .tabs a.on {
-  color: var(--gold);
-  border-bottom: 2px solid var(--gold);
+  color: var(--secondary);
+  border-bottom: 2px solid var(--accent);
 }
 
 .actions {
@@ -437,7 +437,7 @@ onBeforeUnmount(() => {
 
 .notification:hover,
 .notification[aria-expanded="true"] {
-  color: var(--gold);
+  color: var(--secondary);
   background: var(--bg-glass);
 }
 
@@ -458,7 +458,7 @@ onBeforeUnmount(() => {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: var(--gold);
+  background: var(--accent);
   border: 2px solid var(--bg-glass);
 }
 
@@ -501,7 +501,7 @@ onBeforeUnmount(() => {
   padding: 0;
   border: 0;
   background: transparent;
-  color: var(--gold);
+  color: var(--secondary);
   font-size: .72rem;
   cursor: pointer;
 }
@@ -547,7 +547,7 @@ onBeforeUnmount(() => {
 .notification-item.unread {
   background: color-mix(
       in srgb,
-      var(--gold) 5%,
+      var(--accent) 5%,
       transparent
   );
 }
@@ -565,7 +565,7 @@ onBeforeUnmount(() => {
   height: 32px;
   flex-shrink: 0;
 
-  color: var(--gold);
+  color: var(--secondary);
 
   border: 1px solid var(--line);
   border-radius: 50%;
@@ -618,7 +618,7 @@ onBeforeUnmount(() => {
   align-items: center;
   gap: .4rem;
 
-  color: var(--gold);
+  color: var(--secondary);
   text-decoration: none;
   font-size: .8rem;
   font-weight: 500;
@@ -660,7 +660,7 @@ onBeforeUnmount(() => {
 
 .menu-button:hover,
 .menu-button[aria-expanded="true"] {
-  color: var(--gold);
+  color: var(--secondary);
   background: var(--bg-glass);
 }
 
@@ -745,7 +745,7 @@ onBeforeUnmount(() => {
 }
 
 .menu-item:hover {
-  color: var(--gold);
+  color: var(--secondary);
   background: var(--bg-glass);
 }
 
@@ -762,7 +762,7 @@ onBeforeUnmount(() => {
 }
 
 .menu-item.logout {
-  color: var(--gold);
+  color: var(--secondary);
 }
 
 .menu-divider {
@@ -801,7 +801,7 @@ onBeforeUnmount(() => {
 
 a:focus-visible,
 button:focus-visible {
-  outline: 2px solid var(--gold-soft);
+  outline: 2px solid var(--heading);
   outline-offset: 3px;
 }
 

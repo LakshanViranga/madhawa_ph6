@@ -79,19 +79,19 @@ const busy = computed(() => props.loading || showLoader.value)
 .fail button {
   padding: .6rem 1.2rem;
   border-radius: 6px;
-  border: 1px solid var(--gold);
+  border: 1px solid var(--accent);
   background: transparent;
-  color: var(--gold);
+  color: var(--secondary);
   font: 600 .92rem var(--font-body);
   cursor: pointer;
 }
 
 .fail button:hover {
-  background: var(--gold-glow);
+  background: var(--accent-glow);
 }
 
 .fail button:focus-visible {
-  outline: 2px solid var(--gold-soft);
+  outline: 2px solid var(--heading);
   outline-offset: 3px;
 }
 </style>

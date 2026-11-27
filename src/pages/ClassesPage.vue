@@ -241,7 +241,7 @@ async function askUnenroll(c) {
 
 h1 {
   font: 600 clamp(1.6rem, 4vw, 2.2rem) var(--font-display);
-  color: var(--gold-soft);
+  color: var(--heading);
   margin: 0 0 1.5rem;
 }
 
@@ -272,7 +272,7 @@ h2 {
   flex-direction: column;
   gap: .8rem;
   padding: 1.3rem;
-  border: 1px solid var(--gold);
+  border: 1px solid var(--accent);
   border-radius: 6px;
   background: var(--surface);
 }
@@ -283,7 +283,7 @@ h2 {
 
 .tag {
   font-size: .8rem;
-  color: var(--gold);
+  color: var(--secondary);
 }
 
 .next b {
@@ -317,9 +317,9 @@ h2 {
   display: inline-block;
   padding: .65rem 1.2rem;
   border-radius: 6px;
-  border: 1px solid var(--gold);
-  background: var(--gold);
-  color: var(--on-gold);
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: var(--on-accent);
   font: 600 .92rem var(--font-body);
   text-decoration: none;
   cursor: pointer;
@@ -345,16 +345,16 @@ h2 {
 }
 
 .btn:hover {
-  background: var(--gold-soft);
+  background: var(--heading);
 }
 
 .btn.ghost {
   background: transparent;
-  color: var(--gold);
+  color: var(--secondary);
 }
 
 .btn.ghost:hover {
-  background: var(--gold-glow);
+  background: var(--accent-glow);
 }
 
 .btn:disabled {
@@ -400,7 +400,7 @@ h2 {
 }
 
 .ok {
-  color: var(--gold);
+  color: var(--secondary);
   font-size: .9rem;
   margin: .8rem 0 0;
 }
@@ -415,7 +415,7 @@ h2 {
 }
 
 button:focus-visible, a:focus-visible, input:focus-visible {
-  outline: 2px solid var(--gold-soft);
+  outline: 2px solid var(--heading);
   outline-offset: 3px;
 }
 
@@ -462,9 +462,9 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 
 .code {
   padding: .4rem .8rem;
-  border: 1px dashed var(--gold);
+  border: 1px dashed var(--accent);
   border-radius: 6px;
-  color: var(--gold-soft);
+  color: var(--heading);
   font: 700 1rem ui-monospace, monospace;
   letter-spacing: .12em;
 }

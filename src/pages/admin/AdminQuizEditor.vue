@@ -535,7 +535,7 @@ textarea {
   min-height: 150px;
   display: grid;
   place-items: center;
-  border: 1px dashed var(--gold);
+  border: 1px dashed var(--accent);
   border-radius: 6px;
   background: #fff;
   overflow: hidden;
@@ -552,14 +552,14 @@ textarea {
   place-items: center;
   width: 100%;
   min-height: 150px;
-  color: var(--gold);
+  color: var(--secondary);
   font-weight: 600;
   cursor: pointer;
   background: var(--surface-2);
 }
 
 .pick:hover, .pick:focus-within {
-  background: var(--gold-glow);
+  background: var(--accent-glow);
 }
 
 .file {
@@ -594,17 +594,17 @@ textarea {
 }
 
 .lt:hover {
-  border-color: var(--gold);
+  border-color: var(--accent);
 }
 
 .lt.on {
-  background: var(--gold);
-  border-color: var(--gold);
-  color: var(--on-gold);
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--on-accent);
 }
 
 .lt:focus-within, label.btn:focus-within, .pick:focus-within {
-  outline: 2px solid var(--gold-soft);
+  outline: 2px solid var(--heading);
   outline-offset: 2px;
 }
 

@@ -254,7 +254,7 @@ onBeforeUnmount(() => {
 h1 {
   font: 600 2rem var(--font-display);
   margin: 0;
-  color: var(--gold-soft);
+  color: var(--heading);
 }
 
 .muted {
@@ -273,9 +273,9 @@ h1 {
   height: 54px;
   display: grid;
   place-items: center;
-  border: 1px solid var(--gold);
+  border: 1px solid var(--accent);
   border-radius: 50%;
-  color: var(--gold);
+  color: var(--secondary);
   font: 700 1.1rem var(--font-body);
   letter-spacing: .12em;
 }
@@ -289,10 +289,10 @@ h1 {
   height: 54px;
   display: grid;
   place-items: center;
-  border: 1px solid var(--gold);
+  border: 1px solid var(--accent);
   border-radius: 50%;
-  color: var(--on-gold);
-  background: var(--gold);
+  color: var(--on-accent);
+  background: var(--accent);
   font: 700 1.5rem var(--font-body);
 }
 
@@ -323,7 +323,7 @@ label {
 }
 
 .code-input:focus {
-  border-color: var(--gold);
+  border-color: var(--accent);
   outline: none;
 }
 
@@ -349,15 +349,15 @@ label {
 .btn {
   padding: .85rem;
   border-radius: 6px;
-  border: 1px solid var(--gold);
-  background: var(--gold);
-  color: var(--on-gold);
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: var(--on-accent);
   font: 600 1rem var(--font-body);
   cursor: pointer;
 }
 
 .btn:hover {
-  background: var(--gold-soft);
+  background: var(--heading);
 }
 
 .btn:disabled {
@@ -377,13 +377,13 @@ label {
   padding: 0;
   border: 0;
   background: transparent;
-  color: var(--gold);
+  color: var(--secondary);
   font: 600 .85rem var(--font-body);
   cursor: pointer;
 }
 
 .resend-btn:hover:not(:disabled) {
-  color: var(--gold-soft);
+  color: var(--heading);
 }
 
 .resend-btn:disabled {
@@ -393,7 +393,7 @@ label {
 
 .success-message {
   margin: -.35rem 0 0;
-  color: var(--gold-soft);
+  color: var(--heading);
   font-size: .85rem;
   line-height: 1.5;
   text-align: center;
@@ -408,7 +408,7 @@ label {
 }
 
 .back {
-  color: var(--gold);
+  color: var(--secondary);
   font-size: .9rem;
   text-decoration: none;
   text-align: center;
@@ -417,7 +417,7 @@ label {
 a:focus-visible,
 button:focus-visible,
 input:focus-visible {
-  outline: 2px solid var(--gold-soft);
+  outline: 2px solid var(--heading);
   outline-offset: 3px;
 }
 

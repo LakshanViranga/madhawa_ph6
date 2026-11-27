@@ -734,7 +734,7 @@ onMounted(() => {
 
 h1 {
   font: 600 clamp(1.6rem, 4vw, 2.2rem) var(--font-display);
-  color: var(--gold-soft);
+  color: var(--heading);
   margin: 0;
 }
 
@@ -754,14 +754,14 @@ h1 {
   border: 1px solid var(--line);
   border-radius: 6px;
   background: var(--surface);
-  color: var(--gold);
+  color: var(--secondary);
   font: inherit;
   font-size: .85rem;
   cursor: pointer;
 }
 
 .mark-all:hover:not(:disabled) {
-  background: var(--gold-glow);
+  background: var(--accent-glow);
 }
 
 .mark-all:disabled {
@@ -786,9 +786,9 @@ h1 {
   align-items: center;
   gap: 1rem;
   padding: 1rem 1.2rem;
-  border: 1px solid var(--gold);
+  border: 1px solid var(--accent);
   border-radius: 6px;
-  background: var(--gold-glow);
+  background: var(--accent-glow);
 }
 
 .summary-icon {
@@ -797,9 +797,9 @@ h1 {
   width: 42px;
   height: 42px;
   flex: none;
-  border: 1px solid var(--gold);
+  border: 1px solid var(--accent);
   border-radius: 50%;
-  color: var(--gold);
+  color: var(--secondary);
 }
 
 .summary-icon svg {
@@ -836,8 +836,8 @@ h1 {
   height: 32px;
   padding: 0 .4rem;
   border-radius: 50%;
-  background: var(--gold);
-  color: var(--on-gold);
+  background: var(--accent);
+  color: var(--on-accent);
   font-size: .85rem;
   font-weight: 600;
 }
@@ -887,12 +887,12 @@ h1 {
 }
 
 .seg button:not(.on):hover:not(:disabled) {
-  background: var(--gold-glow);
+  background: var(--accent-glow);
 }
 
 .seg button.on {
-  background: var(--gold);
-  color: var(--on-gold);
+  background: var(--accent);
+  color: var(--on-accent);
   font-weight: 600;
 }
 
@@ -923,7 +923,7 @@ h1 {
 
 .notification-group h2 {
   margin: 0 0 .55rem;
-  color: var(--gold-soft);
+  color: var(--heading);
   font: 600 .95rem var(--font-display);
 }
 
@@ -953,7 +953,7 @@ h1 {
 }
 
 .notification-item.unread {
-  background: var(--gold-glow);
+  background: var(--accent-glow);
 }
 
 .category-icon {
@@ -964,7 +964,7 @@ h1 {
   flex: none;
   border: 1px solid var(--line);
   border-radius: 50%;
-  color: var(--gold);
+  color: var(--secondary);
   background: var(--surface);
 }
 
@@ -1001,7 +1001,7 @@ h1 {
   height: 8px;
   flex: none;
   border-radius: 50%;
-  background: var(--gold);
+  background: var(--accent);
 }
 
 .notification-body > p {
@@ -1021,7 +1021,7 @@ h1 {
 }
 
 .category-label {
-  color: var(--gold);
+  color: var(--secondary);
 }
 
 .meta-dot {
@@ -1052,7 +1052,7 @@ h1 {
 
 .read-button:hover:not(:disabled),
 .open-link:hover {
-  color: var(--gold);
+  color: var(--secondary);
   border-color: var(--line);
   background: var(--surface);
 }
@@ -1090,16 +1090,16 @@ h1 {
   align-items: center;
   gap: .55rem;
   padding: .65rem 1.2rem;
-  border: 1px solid var(--gold);
+  border: 1px solid var(--accent);
   border-radius: 6px;
   background: transparent;
-  color: var(--gold);
+  color: var(--secondary);
   font: 600 .88rem var(--font-body);
   cursor: pointer;
 }
 
 .load-more:hover:not(:disabled) {
-  background: var(--gold-glow);
+  background: var(--accent-glow);
 }
 
 .load-more:disabled {
@@ -1112,7 +1112,7 @@ h1 {
   width: 16px;
   height: 16px;
   border: 2px solid var(--line);
-  border-top-color: var(--gold);
+  border-top-color: var(--accent);
   border-radius: 50%;
   animation: spin .7s linear infinite;
 }
@@ -1142,7 +1142,7 @@ h1 {
   margin-left: .35rem;
   border: 0;
   background: transparent;
-  color: var(--gold);
+  color: var(--secondary);
   font: inherit;
   cursor: pointer;
   text-decoration: underline;
@@ -1190,17 +1190,17 @@ h1 {
 .retry-button {
   margin-top: 1rem;
   padding: .55rem .9rem;
-  border: 1px solid var(--gold);
+  border: 1px solid var(--accent);
   border-radius: 6px;
   background: transparent;
-  color: var(--gold);
+  color: var(--secondary);
   font: inherit;
   font-size: .85rem;
   cursor: pointer;
 }
 
 .retry-button:hover {
-  background: var(--gold-glow);
+  background: var(--accent-glow);
 }
 
 /* Empty */
@@ -1221,7 +1221,7 @@ h1 {
   margin-bottom: 1rem;
   border: 1px solid var(--line);
   border-radius: 50%;
-  color: var(--gold);
+  color: var(--secondary);
 }
 
 .empty-icon svg {
@@ -1246,17 +1246,17 @@ h1 {
 .show-all {
   margin-top: .75rem;
   padding: .55rem .9rem;
-  border: 1px solid var(--gold);
+  border: 1px solid var(--accent);
   border-radius: 6px;
   background: transparent;
-  color: var(--gold);
+  color: var(--secondary);
   font: inherit;
   font-size: .85rem;
   cursor: pointer;
 }
 
 .show-all:hover {
-  background: var(--gold-glow);
+  background: var(--accent-glow);
 }
 
 /* Footer */
@@ -1272,7 +1272,7 @@ h1 {
 
 button:focus-visible,
 a:focus-visible {
-  outline: 2px solid var(--gold-soft);
+  outline: 2px solid var(--heading);
   outline-offset: 3px;
 }
 

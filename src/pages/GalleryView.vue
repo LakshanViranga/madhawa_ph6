@@ -152,14 +152,14 @@ onUnmounted(() => {
 }
 
 .back {
-  color: var(--gold);
+  color: var(--secondary);
   text-decoration: none;
   font-size: .9rem;
 }
 
 h1 {
   font: 600 clamp(1.8rem, 5vw, 2.8rem) var(--font-display);
-  color: var(--gold-soft);
+  color: var(--heading);
   margin: .75rem 0 .5rem;
   line-height: 1.15;
 }
@@ -195,17 +195,17 @@ h1 {
 }
 
 .tab:hover {
-  border-color: var(--gold);
+  border-color: var(--accent);
 }
 
 .tab.on {
-  background: var(--gold);
-  border-color: var(--gold);
-  color: var(--on-gold);
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--on-accent);
 }
 
 .tab.on span {
-  color: var(--on-gold);
+  color: var(--on-accent);
 }
 
 .grid {
@@ -268,7 +268,7 @@ h1 {
 }
 
 .item:focus-visible, .tab:focus-visible, .back:focus-visible, .ctl:focus-visible {
-  outline: 2px solid var(--gold-soft);
+  outline: 2px solid var(--heading);
   outline-offset: 3px;
 }
 
@@ -335,8 +335,8 @@ figcaption {
 }
 
 .ctl:hover {
-  border-color: var(--gold);
-  color: var(--gold);
+  border-color: var(--accent);
+  color: var(--secondary);
 }
 
 .close {
